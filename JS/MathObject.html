@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <input type="text" id="inp2">
+    <h1 id="a"></h1>
+    <h1 id="a1"></h1>
+    <h1 id="a2"></h1>
+    <h1 id="a3"></h1>
+    <button onclick="abc()">Submit</button>
+    <script>
+        function abc(){
+            let num1=document.getElementById("inp1").value;
+            let num2=document.getElementById("inp2").value;
+            let s=Math.sqrt(num1);
+            let b=Math.cbrt(num2);
+            let p=Math.pow(num1,num2);
+            let h=Math.hypot(num1,num2);
+            let i=Math.PI;
+            console.log(Math.exp(0));
+            console.log(Math.max(10,20,40,50,60));
+            console.log(Math.min(10,20,40,50,60));
+            console.log(i);
+            
+            
+            document.getElementById("a").innerHTML=`given number square root is : ${s}`;
+            document.getElementById("a1").innerHTML=`given number cube root is : ${b}`;
+            document.getElementById("a2").innerHTML=`given number square root is : ${p}`;
+            document.getElementById("a3").innerHTML=`given number square root is : ${h}`;
+             
+
+            /*Radians
+            0deg-0
+            30deg-PI/6
+            45deg-PI/4
+            60deg-PI/3
+            90deg-PI/2
+            */
+
+            console.log("=====================================");
+            console.log(Math.sin(0));
+            console.log(Math.sin((Math.PI)/6).toFixed(2));
+            console.log(Math.sin((Math.PI)/4).toFixed(2));
+            console.log(Math.sin((Math.PI)/3).toFixed(2));
+            console.log(Math.sin((Math.PI)/2).toFixed(2));
+
+            console.log("=====================================");
+            console.log(Math.cos(0));
+            console.log(Math.cos((Math.PI)/6).toFixed(2));
+            console.log(Math.cos((Math.PI)/4).toFixed(2));
+            console.log(Math.cos((Math.PI)/3).toFixed(2));
+            console.log(Math.cos((Math.PI)/2).toFixed(2));
+
+            console.log("=====================================");
+            console.log(Math.tan(0));
+            console.log(Math.tan((Math.PI)/6).toFixed(2));
+            console.log(Math.tan((Math.PI)/4).toFixed(2));
+            console.log(Math.tan((Math.PI)/3).toFixed(2));
+            console.log(Math.tan((Math.PI)/2).toFixed(2));
+            
+
+
+            
+            // let n=Math.random();
+            // console.log(n)
+            // let r=Math.round(n);
+            // console.log(r);
+            // let m1=n*10;
+            // let r1=Math.round(m1);
+            // console.log(m1);
+            // console.log(r1);
+            let n=Math.random()*10;
+            let c1=Math.ceil(n);
+            console.log("----ceil value---");
+            console.log(c1);
+            console.log("----random value----");
+            console.log(n);
+            let f1=Math.floor(n);
+            console.log("----floor value-----");
+            console.log(f1);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function areaOfCircle()
+        {
+            const PI=3.4;
+            let radius=9;
+            let areaOfCircle=PI*radius*radius;
+            console.log(areaOfCircle);
+            // 'area of circle isn: ${areaOfCircle}'
+            console.log(`area of circle is: ${areaOfCircle}`);
+        }
+        areaOfCircle();
+        function areaOfTraingle( breadth,height)
+        {
+            let areaOfTraingle=0.5*breadth*height;
+            // console.log(areaOfTraingle);
+            // 'area of circle isn: ${areaOfCircle}'
+            console.log(`area of triangle is: ${areaOfTraingle}`);
+        }
+        areaOfTraingle(5,6);
+  
+
+        function areaOfTraingle12( ...rest)
+        { 
+            console.log(rest);
+            let sum=0;
+            for(i=0;i<rest.length;i++){
+                sum+=rest[i];
+            }
+            console.log(sum);
+          
+        }
+        areaOfTraingle12(5,6,4,3,2,2,2,4,5,4,5);
+
+        // function demo(...rest){
+        //     let sum=0;
+        //     for( i=0;i<rest.length;i++){
+        //         sum+=rest[i];
+        //     }
+        //     console.log(sum);
+
+        // }
+
+
+
+    </script>
+</body>
+</html>

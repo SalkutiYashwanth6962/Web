@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            background-color: aqua;
+            width:180px;
+            height: 300px;
+            padding:40px;
+            border:2px solid black;
+            position:relative;
+            left:650px;
+            top:100px;
+        }
+        button:hover{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+   
+    <label for="">User Name: </label><br><input type="text" id="inp1" >
+    <br>
+    <small id="s1"></small>
+    <br>
+    <label for="">Phone Number: </label><br><input type="text" id="inp2" >
+    <br>
+    <small id="s2"></small>
+    <br>
+    <label for="">Password: </label><br><input type="text" id="inp3" >
+    <br>
+    <small id="s3"></small>
+    <br>
+     <label for="">Pan Card: </label><br><input type="text" id="inp4" >
+    <br>
+    <small id="s4"></small>
+    <br>
+     <label for="">Email: </label><br><input type="text" id="inp5" >
+    <br>
+    <small id="s5"></small>
+    <br>
+    <center><button onclick="demo()">SUBMIT</button></center>
+</div>
+   
+    <script>
+        function demo(){
+            let name=document.getElementById("inp1").value;
+            console.log(name);
+            let inp1=document.getElementById("inp1");
+            let s1=document.getElementById("s1");
+
+            let exp1=/^[a-zA-Z]{3,15}$/
+            
+
+
+            if(name==""){
+                inp1.style.border=`2px solid red`;
+                s1.innerHTML=`dont leave empty`;
+                s1.style.color=`red`;
+
+            }
+            //exp1.test(name)
+            else if(name.match(exp1)){
+                inp1.style.border='2px solid green ';
+                s1.innerHTML=`username is:${name}`;
+                s1.style.color=`green`;
+                
+            }
+            else{
+                inp1.style.border=`2px solid red`;
+                s1.innerHTML=`invalid user name`;
+                s1.style.color=`red`;
+
+            }
+
+            let phone=document.getElementById("inp2").value;
+            console.log(phone);
+            let inp2=document.getElementById("inp2");
+            let s2=document.getElementById("s2");
+
+            let exp2=/^[6-9]{1}[0-9]{9}$/
+            
+
+
+            if(phone==""){
+                inp2.style.border=`2px solid red`;
+                s2.innerHTML=`dont leave empty`;
+                s2.style.color=`red`;
+
+            }
+           
+            else if(phone.match(exp2)){
+                inp2.style.border='2px solid green ';
+                s2.innerHTML=`phone no is:${phone}`;
+                s2.style.color=`green`;
+                
+            }
+            else{
+                inp2.style.border=`2px solid red`;
+                s2.innerHTML=`invalid phone number`;
+                s2.style.color=`red`;
+
+            }
+
+            
+
+            let password=document.getElementById("inp3").value;
+            console.log(phone);
+            let inp3=document.getElementById("inp3");
+            let s3=document.getElementById("s3");
+
+            let exp3=/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{8, }$/
+            
+            
+            if(password==""){
+                inp3.style.border=`2px solid red`;
+                s3.innerHTML=`dont leave empty`;
+                s3.style.color=`red`;
+
+            }
+           
+            else if(phone.match(exp3)){
+                inp3.style.border='2px solid green ';
+                s3.innerHTML=`password is:${password}`;
+                s3.style.color=`green`;
+                
+            }
+            else{
+                inp3.style.border=`2px solid red`;
+                s3.innerHTML=`invalid password`;
+                s3.style.color=`red`;
+
+            }
+
+            let pancard=document.getElementById("inp4").value;
+            console.log(pancard);
+            let inp4=document.getElementById("inp4");
+            let s4=document.getElementById("s4");
+
+            let exp4=/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/
+            
+
+
+            if(pancard==""){
+                inp4.style.border=`2px solid red`;
+                s4.innerHTML=`dont leave empty`;
+                s4.style.color=`red`;
+
+            }
+            //exp1.test(name)
+            else if(pancard.match(exp4)){
+                inp4.style.border='2px solid green ';
+                s4.innerHTML=`pancard no is:${pancard}`;
+                s4.style.color=`green`;
+                
+            }
+            else{
+                inp4.style.border=`2px solid red`;
+                s4.innerHTML=`invalid pancard number`;
+                s4.style.color=`red`;
+
+            }
+
+            let email=document.getElementById("inp5").value;
+            let inp5=document.getElementById("inp5");
+            let s5=document.getElementById("s5");
+
+            let exp5=/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
+            if(email==""){
+                s5.style.color='red';
+                s5.innerHTML='please dont leave empty';
+                inp5.style.border='2px solid red'
+            }
+            else if(email.match(exp5)){
+                s5.style.color='green';
+                s5.innerHTML=`entered email id :${email}`;
+                inp5.style.border='2px solid red'
+
+            }
+            else{
+                s5.style.color='red';
+                s5.innerHTML='invalid email id';
+                inp5.style.border='2px solid red'
+            }
+
+
+        
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">User Name: </label><br><input type="text" id="inp1" >
+    <br>
+    <small id="s1"></small>
+    <br>
+    <label for="">Phone Number: </label><br><input type="text" id="inp2" >
+    <br>
+    <small id="s2"></small>
+    <br>
+    <label for="">Password: </label><br><input type="text" id="inp3" >
+    <br>
+    <small id="s3"></small>
+    <br>
+     <label for="">Pan Card: </label><br><input type="text" id="inp4" >
+    <br>
+    <small id="s4"></small>
+    <br>
+     <label for="">Email: </label><br><input type="text" id="inp5" >
+    <br>
+    <small id="s5"></small>
+    <br>
+   
+    <button onclick="demo()">Submit</button>
+    <script>
+        function demo(){
+            let name=document.getElementById("inp1").value;
+            let b=document.getElementById("inp1")
+            let c=document.getElementById("s1")
+
+            let exp=/^[a-zA-Z]{3,15}$/
+            if(name=="")
+            {   
+                b.style.border="2px solid red"
+                c.innerHTML=`Dont leave empty`;
+                c.style.color="red";
+            }
+            else if(exp.test(name))
+            {
+                b.style.border="2px solid green";
+                
+                localStorage.setItem("Name",name)
+                sessionStorage.setItem("Name",name)
+
+                sessionStorage.removeItem("Phone no");
+                c.innerHTML=`username is:${sessionStorage.getItem("Name")}`;
+                c.style.color='green';
+                //localStorage.clear();
+            }
+            else{
+                b.style.border="2px solid red";
+                c.innerHTML="Invalid user data";
+                c.style.color="red";
+            }
+
+
+            let phone=document.getElementById("inp2").value;
+            console.log(phone);
+            let inp2=document.getElementById("inp2");
+            let s2=document.getElementById("s2");
+
+            let exp2=/^[6-9]{1}[0-9]{9}$/
+            
+
+
+            if(phone==""){
+                inp2.style.border=`2px solid red`;
+                s2.innerHTML=`dont leave empty`;
+                s2.style.color=`red`;
+
+            }
+           
+            else if(phone.match(exp2)){
+                inp2.style.border='2px solid green ';
+                s2.innerHTML=`phone no is:${localStorage.getItem("Phone")}`;
+                s2.style.color=`green`;
+                localStorage.setItem("Phone",phone)
+                sessionStorage.setItem("Phone",phone)
+                sessionStorage.removeItem("Phone no")
+               
+                
+            }
+            else{
+                inp2.style.border=`2px solid red`;
+                s2.innerHTML=`invalid phone number`;
+                s2.style.color=`red`;
+
+            }
+
+            
+
+            let password=document.getElementById("inp3").value;
+            console.log(password);
+            let inp3=document.getElementById("inp3");
+            let s3=document.getElementById("s3");
+
+            let exp3=/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z]).{8, }$/
+            
+            
+            if(password==""){
+                inp3.style.border=`2px solid red`;
+                s3.innerHTML=`dont leave empty`;
+                s3.style.color=`red`;
+
+            }
+           
+            else if(password.match(exp3)){
+                inp3.style.border='2px solid green ';
+               // s3.innerHTML=`password is:${password}`;
+                s3.style.color=`green`;
+                localStorage.setItem("password",password);
+                sessionStorage.setItem("password",password);
+                s3.innerHTML=`entered password :${sessionStorage.getItem("password")}`;
+                
+            }
+            else{
+                inp3.style.border=`2px solid red`;
+                s3.innerHTML=`invalid password`;
+                s3.style.color=`red`;
+
+            }
+
+            let pancard=document.getElementById("inp4").value;
+            console.log(pancard);
+            let inp4=document.getElementById("inp4");
+            let s4=document.getElementById("s4");
+
+            let exp4=/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/
+            
+
+
+            if(pancard==""){
+                inp4.style.border=`2px solid red`;
+                s4.innerHTML=`dont leave empty`;
+                s4.style.color=`red`;
+
+            }
+            //exp1.test(name)
+            else if(pancard.match(exp4)){
+                inp4.style.border='2px solid green ';
+              //  s4.innerHTML=`pancard no is:${pancard}`;
+                s4.style.color=`green`;
+                localStorage.setItem("pancard",pancard);
+                sessionStorage.setItem("pancard",pancard);
+                s4.innerHTML=`entered email id :${sessionStorage.getItem("pancard")}`;
+                
+            }
+            else{
+                inp4.style.border=`2px solid red`;
+                s4.innerHTML=`invalid pancard number`;
+                s4.style.color=`red`;
+              
+
+            }
+
+            let email=document.getElementById("inp5").value;
+            let inp5=document.getElementById("inp5");
+            let s5=document.getElementById("s5");
+
+            let exp5=/^[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$/
+            if(email==""){
+                s5.style.color='red';
+                s5.innerHTML='please dont leave empty';
+                inp5.style.border='2px solid red'
+            }
+            else if(email.match(exp5)){
+              
+                inp5.style.border='2px solid green'
+                localStorage.setItem("email",email);
+                sessionStorage.setItem("email",email);
+                s5.innerHTML=`entered email id :${sessionStorage.getItem("email")}`;
+                s5.style.color='green';
+
+            }
+            else{
+                s5.style.color='red';
+                s5.innerHTML='invalid email id';
+                inp5.style.border='2px solid red'
+            }
+
+
+        }
+    </script>
+</body>
+</html>

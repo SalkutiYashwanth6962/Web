@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SELECT YOUR GENDER</h1>
+    <input type="radio" name="gen" value="FEMALE">FEMALE <br>
+    <input type="radio" name="gen" value="OTHERS">OTHERS <br>
+    <input type="radio" name="gen" value="MALE">MALE <br>
+    <input type="checkbox" name="skill1" value="">c lang <br>
+    <input type="checkbox" name="skill2" value="">c++ lang <br>
+    <input type="checkbox" name="skill3" value="">java lang <br>
+    <input type="checkbox" name="skill4" value="">python lang <br>
+    <input type="checkbox" name="skill5" value="">sql lang <br>
+    <button onclick="gen()">SUBMIT</button>
+    <h1 id="abc"></h1>
+    <script>
+        function gen(){
+            let gen=document.getElementsByName("gen");
+           console.log("gen");
+            for(const i of gen){
+              //  console.log(i)
+              let a=i.checked;
+              console.log(a)
+              if(a==true){
+                let num=i.value;
+               // console.log(num);
+               document.getElementById("abc").innerHTML=`user selected gender is :${num}`
+              }
+            }
+        }
+    </script>
+
+</body>
+</html>

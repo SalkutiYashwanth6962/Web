@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,2,3,4,5,6,7];
+        let arr1=['a','e','i','o','u'];
+        let arr2=["html ","css ","js "];
+        let arr3=[1,3,45,'d','e',"java","js"];
+        console.log(arr3);
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+        console.log(arr3[2]);
+        console.log(arr3[3]);
+        for(i=0;i<=arr3.length-1;i++){
+            console.log(arr3[i]);
+        }
+        //concat method
+        console.log(arr.concat(arr1));
+        //join()
+
+        let a=["html","css","js"];
+        console.log(a.join("+"));
+
+        let arr4=['A','T','E','R','V','Q','H','N','M',];
+        console.log(arr4.slice(0,5));
+        console.log(arr4);
+        console.log(arr4.slice(1,));
+        console.log(arr4.slice(-6,-4));
+        let a1=arr4.splice(1,2);
+        console.log(a1)
+        console.log(arr4);
+        let a2=arr4.splice(2,0,"html","css");
+        console.log(arr4);
+        let a3=arr4.splice(2,3,"dinga","dingi","donga","dongi");
+        console.log(arr4)
+        console.log(arr4.shift())
+        console.log(arr4)
+        console.log(arr4.unshift(4));
+        console.log(arr4)
+        console.log(arr4.pop())
+        console.log(arr4)
+        console.log(arr4.push("yashwanth"))
+        console.log(arr4)
+        console.log(arr4.sort());
+        console.log(arr4.reverse())
+
+        //The push() method adds new items to the end of an array.
+//  The pop() method removes (pops) the last item of an array.
+//  The shift() method removes the first item of an array.
+//  The unshift() method adds new items to the beginning of an array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // console.log(arr3.slice(0,-1));
+        // console.log(arr3);
+        // console.log(arr3.splice(0,3)); //from this index 0 how many elements we have to delete 3 elements
+        // console.log(arr3);
+
+
+
+
+    </script>
+</body>
+</html>

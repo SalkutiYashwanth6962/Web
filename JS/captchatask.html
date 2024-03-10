@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+           align-items: center;
+           min-height: 600px;
+
+          flex-direction:column;
+          background-color: aqua;
+           
+        }
+        button{
+            margin:10px;
+            /* border-radius: 30px;
+            padding:40px 60px;
+            font-size: 30px; */
+        }
+        button:hover{
+            background-color: black;
+            color:white;
+            transform:scale(1.09,1.09);
+
+        }
+        h1{
+            font-size:20px;
+            font-style:italic;
+            color:red;
+            letter-spacing: 3px;
+            -webkit-text-stroke: 2px black;
+        }
+    </style>
+</head>
+<body onload="captchageneration()">
+    <!-- <div style="border: 5px solid red;"> -->
+    <h1 id="h1">CAPTCHA CHECKER</h1>
+    <label for="">Captcha</label><input type="text" id="autocaptcha" maxlength="6"><br>
+    <label for="">Enter the Captcha as above</label>
+    <input type="text" id="enteredcaptcha">
+    <button onclick="verify()">Verify</button><button onclick="captchageneration()">refresh</button>
+    <!-- </div> -->
+    <script>
+        
+        function captchageneration(){
+            let captcha='';
+            let captchaArr=['A','B','C','D','E','F','0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+            //console.log(colorArr.length);
+            console.log(Math.random());
+            for(i=0;i<6;i++){
+
+                let num=Math.floor(Math.random()*(captchaArr.length));
+                console.log(num);
+                let c=captchaArr[num]
+                console.log(c);
+                captcha+=c;
+                console.log(captcha)
+              //  document.getElementById("abc").innerHTML=captcha;
+                document.getElementById("autocaptcha").value=captcha;
+               // document.body.style.backgroundColor=color;
+
+
+            }
+            //console.log(color)
+        }
+        function verify(){
+            if(document.getElementById("autocaptcha").value==document.getElementById("enteredcaptcha").value){
+                
+                document.body.style.backgroundColor=`green`;
+                window.alert("valid captcha");
+            }
+            else{
+                document.body.style.backgroundColor=`red`;
+                window.alert("invalid captcha");
+            }
+        }
+       
+
+    
+       
+    </script>
+    
+</body>
+</html>

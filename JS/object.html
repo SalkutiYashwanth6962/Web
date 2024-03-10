@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a={
+            //key:value;
+            Name:"Dinga",
+            Age:21,
+            Qualification:"B.tech"
+        }
+        console.log(a);
+        console.log("---------------------");
+        console.log(a.Qualification);
+        console.log(a.Name);
+        console.log(a.Age);
+
+        let b=["dinga","btech",21];
+        console.log(b);
+        console.log(b[1]);
+        console.log(b[2]);
+
+        let c={
+            Name:"Dinga",
+            color:["red","green","blue","yellow"]
+        }
+        console.log(c);
+        console.log(c.Name);
+        console.log(c.color[0]);
+        let d=c.color;
+        console.log(d);
+        for(i=0;i<=d.length;i++){
+
+            console.log(d[i]);
+        }
+
+        let e=[
+            {
+                Name:"dinga",
+                Age:21,
+                Qualification:"btech"
+            },
+            {
+                Name:"dingi",
+                Age:22,
+                Qualification:"mtech"
+            },
+            {
+                Name:"Manga",
+                Age:21,
+                Qualification:"inter"
+            }
+
+        ]
+        console.log(e)
+        for(i=0;i<e.length;i++){
+            console.log(e[i])
+            console.log(e[i].Name)
+            console.log(e[i].Age)
+            console.log(e[i].Qualification)
+        }
+        
+
+        console.log("==========")
+        let a1={
+            //key:value;
+            Name:"Dinga",
+           Age:21,
+            Percentage:98.7,
+            Qualification:"B.tech"
+           
+        }
+        console.log(a1.Percentage);
+        for(const k in a1){
+            console.log(k)
+            console.log(a[k])
+        }
+        // for(const a2 of a1){
+        //     //console.log(a2);
+        // }
+        let color=["red","green","yellow","blue"];
+        console.log(color);
+        for(i=0;i<color.length;i++){
+            console.log(color[i]);
+        }
+
+        for(const k of color){
+            console.log(k)
+        }
+
+        let b1={
+            Name:"Dinga",
+            color:["red","green","yellow","blue"]
+        }
+        for(const k1 in b1){
+            console.log(b[k1])//undefined error
+        }
+        
+    </script>
+</body>
+</html>

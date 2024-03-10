@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input,label{
+            display:block;
+        }
+        #parent{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+            position: relative;
+            margin-left: 600px;
+            margin-top: 70px;
+            border:4px dotted red;
+            border-radius: 8%; 
+            /* background-image:repeating-linear-gradient(to bottom,aqua 10%,pink 20%, blue 30%,orange 40%,red 50%,yellow 60%,maroon 70%,violet 80%); */
+            background-image:repeating-linear-gradient(to top left ,rgb(245,133,41) 20%,rgb(254,218,119) 40%, rgb(221,42,123) 60%,rgb(129,52,175) 80%,rgb(81,91,212) 100%);
+        }
+        h1{
+            color: red;
+            text-align: center;
+            
+        }
+        #child{
+            background-color: cadetblue;
+            width:200px;
+            height:200px;
+            padding:55px;
+            border-radius: 100%;
+            position:absolute;
+            margin-left: -30px;
+            margin-top:12px;
+            
+            /* position: center; */
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <h1><i>STUDENT FORM</i> </h1>
+    <div id="child">
+    <label for="name">NAME</label><input type="text" id ="name">
+    <small id="s1"></small>
+    <label for="phoneno">PHONE NO</label> <input type="text" id="phoneno">
+    <small id="s2"></small>
+    <label for="password">PASSWORD</label><input type="password" id ="password">
+    <small id="s3"></small>
+    <label for="password1">CONFIRM PASSWORD</label><input type="password" id ="password1">
+    <small id="s4"></small>
+    <br>
+    <center><button type="submit" onclick="demo()" > submit</button></center>
+ </div>
+</div>
+    <script>
+        function demo(){
+           let name1= document.getElementById("name").value;
+           let inp1=document.getElementById("name");
+           let s11=document.getElementById("s1");
+           let phone1= document.getElementById("phoneno").value;
+           let inp2=document.getElementById("phoneno");
+           let s21=document.getElementById("s2");
+           let pass01= document.getElementById("password").value;
+           let inp3=document.getElementById("password");
+           let s31=document.getElementById("s3");
+           let pass02= document.getElementById("password1").value;
+           let inp4=document.getElementById("password1");
+           let s41=document.getElementById("s4");
+
+           if(name1==""){
+            s11.innerHTML=`please dont leave empty`;
+            s11.style.color="red";
+            inp1.style.border="2px solid red"
+            s11.style.visiblity="visible";
+           }
+           else if(name1.length<3||name1.length>15){
+            s11.innerHTML=`invalid name`;
+            s11.style.color="green";
+            inp1.style.border="2px solid green";
+            s11.style.visibility="visible";
+           }
+           else{
+            //s11.innerHTML=`invalid name`;
+           // s11.style.color="green";
+            inp1.style.border="2px solid green";
+            s11.style.visibility="hidden";
+           }
+           if(phone1==""){
+            s21.innerHTML=`please dont leave empty`;
+            s21.style.color="red";
+            inp2.style.border="2px solid red"
+            s21.style.visiblity="visible";
+           }
+           else if(phone1.length<10||phone1.length>10){
+            s21.innerHTML=`invalid phone number`;
+            s21.style.color="green";
+            inp2.style.border="2px solid green";
+            s21.style.visibility="visible";
+           }
+           else{
+           
+            inp2.style.border="2px solid green";
+            
+           // s11.style.visibility="hidden";
+            s21.innerHTML=`valid number`;
+           s21.style.color="green";
+           }
+
+           if(pass01==""){
+            s31.innerHTML=`please dont leave empty`;
+            s31.style.color="red";
+            inp3.style.border="2px solid red"
+            s31.style.visiblity="visible";
+           }
+           else if(pass01.length<6||pass01.length>6){
+            s31.innerHTML=`invalid password`;
+            s31.style.color="green";
+            inp3.style.border="2px solid green";
+            s31.style.visibility="visible";
+           }
+           else{
+           
+            inp3.style.border="2px solid green";
+            
+           // s11.style.visibility="hidden";
+            s31.innerHTML=`valid password`;
+           s31.style.color="green";
+           }
+           if(pass02==""){
+            s41.innerHTML=`please dont leave empty`;
+            s41.style.color="red";
+            inp4.style.border="2px solid red"
+            s41.style.visiblity="visible";
+           }
+           else if(pass02.length<6||pass02.length>6){
+            s41.innerHTML=`invalid password`;
+            s41.style.color="green";
+            inp4.style.border="2px solid green";
+            s41.style.visibility="visible";
+           }
+           else if(pass01==pass02){
+           
+            inp4.style.border="2px solid green";
+            
+           // s11.style.visibility="hidden";
+            s41.innerHTML=`the above password which you have entered is matched`;
+           s41.style.color="green";
+           }
+           else{
+            inp4.style.border="2px solid green";
+            
+           // s11.style.visibility="hidden";
+            s41.innerHTML=`the above password which you have entered is not matched`;
+           s41.style.color="green";
+           }
+
+           
+        }
+    </script>
+       
+</body>
+</html>

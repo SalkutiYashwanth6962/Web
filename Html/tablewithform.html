@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2px" rules="all">
+        <tr>
+            <td colspan="3"><center>pizza shop 2.0</center></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td colspan="2"></td>
+            
+        </tr>
+        <tr>
+            <td>pizza toping</td>
+            <td><input type="radio" name="a"><label for="">supreme</label><br>
+                <input type="radio" name="a"><label for="">vegetarian</label><br>
+                <input type="radio" name="a"><label for="">hawallian</label></td>
+        </tr>
+        <tr>
+           <td colspan="">Pizza Sauce</td>
+           <td><select name="" id="">
+            <option value="">select</option>
+           </select></td>
+
+        </tr>
+        <tr>
+            <td>Optional Extras</td>
+            <td><input type="checkbox"><label for="">Extra Cheese</label> &nbsp;&nbsp;<input type="checkbox"><label for="">Gluten free Base</label> </td>
+        </tr>
+        <tr>
+            <td colspan="6">
+                Delivery Instructions: <br>
+                <textarea name="" id="" cols="20" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button>Send My Order</button>
+            </td>
+        </tr>
+    </table>
+    <script>const c=console.log
+        const arrs=[1,2,1,"ien"]
+const noar=arrs.filter(
+    (ar,index)=>{
+        return arrs.indexOf(ar)===index}
+    )
+        c(noar)
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <button onclick="demo()">click</button>
+    <h1 id="abc"></h1>
+    <h1 id="abc1"></h1>
+   
+    <script>
+        function demo(){
+            let inp=document.getElementById("inp1").value;
+            document.querySelector("#abc").innerHTML=`<mark><i>User Name is:${inp}</i></mark>`;
+            document.querySelector("#abc1").innerText=`<mark><i>User Name is:${inp}</i></mark>`;
+        }
+    </script>
+</body>
+</html>

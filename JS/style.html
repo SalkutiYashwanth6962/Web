@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .abc{
+            background-color: aqua;
+            color:red;
+            padding:30px;
+            font-style: italic;
+        }
+        .para{
+            color:orange;
+            background-color: blueviolet;
+            padding:50px;
+            font-size: 50px;
+            text-shadow:2px 2px 2px black,-2px 2px 2px black,2px -2px 2px black,-2px -2px 2px black;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Welcome to Style</h1>
+    <p>Welcome to para</p>
+    <button onclick="demo()">SUBMIT</button>
+    <script>
+        function demo(){
+            let heading=document.querySelector("h1");
+            // heading.style.color="red";
+            // heading.style.backgroundColor="blue";
+            // heading.style.padding="30px";
+            // heading.style.fontstyle="italic";
+            heading.classList.add("abc");
+            console.log("heading");
+
+            let para=document.querySelector("p");
+            // para.style.color="orange";
+            // para.style.backgroundColor="blueviolet";
+            // para.style.textShadow="2px 2px 2px black,-2px 2px 2px black,2px -2px 2px black,-2px -2px 2px black,";
+            // para.style.padding="50px";
+            // para.style.fontSize="50px";
+
+            para.classList.add("para")
+            console.log("para");
+        }
+    </script>
+</body>
+</html>

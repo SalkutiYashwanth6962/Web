@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addFiveNum(...rest){
+         console.log(rest);
+         let sum=0;
+         for(i=0;i<rest.length;i++){
+            sum=sum+rest[i];
+         }
+          console.log(sum);
+        
+         }
+         addFiveNum(2,3,5,6,7);
+
+         function productFiveNum(...rest){
+         
+         let product=1;
+         for(i=0;i<rest.length;i++){
+            product=product*rest[i];
+         }
+          console.log(product);
+        
+         }
+         productFiveNum(2,3,5,6,7);
+
+         function sumTwoNumproductFiveNum(a,b,...rest){
+         let sum=a+b;
+         console.log(`the sum of two numbers :${sum}`);
+         let product=1;
+         for(i=0;i<rest.length;i++){
+            product=product*rest[i];
+         }
+          console.log(`the product of five numbers: ${product}`);
+        
+         }
+         sumTwoNumproductFiveNum(2,3,5,6,7,8,9);
+
+         function summationOfFourNum(...rest){
+            let sum=0;
+            for(i=0;i<rest.length;i++){
+                sum=sum+rest[i];
+            }
+            if(sum%2==0){
+                console.log('even');
+            }else{
+                console.log('odd');
+            }
+
+         }
+         summationOfFourNum(3,4,5,6)
+
+
+         function ProductOfSevenNum(...rest){
+            let product=1;
+            for(i=0;i<rest.length;i++){
+                product=product*rest[i];
+            }
+            console.log(product);
+            if(product%2==0){
+                for(i=0;i<rest.length;i++){
+                     if(rest[i]%2==0)
+
+                    console.log(rest[i]);
+                }
+                
+            }else{
+                for(i=0;i<rest.length;i++){
+                     if(rest[i]%2==1)
+
+                    console.log(rest[i]);
+                }
+            }
+
+         }
+         ProductOfSevenNum(1,2,3,4,5,6,7)
+    </script>
+</body>
+</html>

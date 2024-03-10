@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inc and Dec task</title>
+    <style>
+        #container{
+            border: 2px solid black;
+            background-color:bisque;
+            width:270px;
+            height:48px;
+            position:relative;
+            top :380px;
+            left:700px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 2px 2px 2px black;
+            padding-left:10px;
+            padding-top: 3px;
+           
+        }
+        input{
+            border-style: none;
+            background-color:bisque;
+            /* font-size: 30px; */
+        }
+        #minus{
+            font-size: 30px;
+            background-color:bisque;
+        }
+        #plus{
+            font-size: 30px;
+            background-color:bisque;
+        }
+        #value{
+            height: 30px;
+            font-weight: 130px;  
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <table style="border-style: none;">
+            <tr>
+             <td><input type="button" name="" id="minus" value="-" onclick="decrement()"></td>
+             <td><input type="text" name="" id="value" min="0" max="30" step="" value="0"></td>
+             <td><input type="button" name="" id="plus" value="+" onclick="increment()"></td>
+            </tr>
+           
+        </table>
+    </div>
+<!--     
+    <div id ="container">
+        <span id="minu" onclick="decrement()">
+            -
+        </span>
+        <span id="valu" >
+          0
+        </span>
+        <span id="plu" onclick="increment()">
+            +
+        </span>
+    </div> -->
+    <script>
+        let v=document.getElementById("value").value;
+        console.log(v);
+       function decrement(){
+        let b= document.getElementById("value").value;
+        console.log(b);
+       let decValue= --b;
+       let c=document.getElementById("value");
+       c.value=" ";
+       c.value=decValue;
+       if(c.value<0){
+        c.value=0;
+       }
+       }
+       function increment(){
+        let b= document.getElementById("value").value;
+        console.log(b);
+       let incValue= ++b;
+       let e=document.getElementById("value");
+       e.value=" ";
+       e.value=incValue;
+       if(e.value>30){
+        e.value=30;
+       }
+       }
+    </script>
+
+
+
+</body>
+</html>

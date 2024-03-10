@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       body{
+            background-color: aqua;
+           
+        }
+        #form{
+            position: relative;
+        }
+        sup{
+            color: red;
+        }
+        #gen{
+            width:20%;
+            height:80px;
+            /* background-color:brown; */
+            position: absolute;
+            top:140px;
+            left:1100px;
+        }
+        #permanent{
+            width:20%;
+            height:300px;
+            /* background-color: burlywood; */
+            position: absolute;
+            top:210px;
+            left:1100px;
+        }
+        #email{
+            /* background-color: bisque; */
+            position: absolute;
+            top:480px;
+            left:600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="form">
+       <center><h1>Application Form</h1></center>
+       <label for="">Applicant's Name: <sup>*</sup></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="180"><br>
+       <label for="">Father's Name: <sup>*</sup></label>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="180"><br>
+       <label for="">Mother's Name: <sup>*</sup></label>  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="180"><br>
+       <label for="">Date of Birth: <sup>*</sup></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="" id="" ><br>
+       <label for="">Nationality: <sup>*</sup></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+       <select name="" id="">
+         <option value="">India</option>
+         <option value="">Nigeria</option>ia</option>
+         <option value="">Bangladesh</option>
+       </select><br>
+       <label for="">Marital Status: <sup>*</sup></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <label for="">Married</label><input type="radio" name="a" id=""> 
+       <label for="">Unmarried</label><input type="radio" name="a" id=""> <br>
+       <div id="gen">
+        <label for="">Gender: <sup>*</sup></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+       <label for="">Male</label><input type="radio" name="a" id=""> 
+       <label for="">Female</label><input type="radio" name="a" id=""> <br>
+       <label for="">National Id:</label><input type="text"><br>
+       <label for="">Freedom Fighter Quota:</label>
+       <label for="">Yes</label><input type="radio" name="a" id=""> 
+       <label for="">No</label><input type="radio" name="a" id=""> <br>
+
+
+       </div>
+       
+       <hr>
+       <h1>Present Address:</h1>
+       <br>
+       <br>
+       <label for="">Care of:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br>
+       <label for="">Village:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id=""><br>
+       <label for="">District:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="" id=""><option value="">Select One</option></select><br>
+       <label for="">Upzilla:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br>
+       <label for="">Post office:</label>&nbsp;&nbsp;<input type="text"><br>
+       <label for="">Post Code:</label>&nbsp;&nbsp;&nbsp;<input type="text"><br>
+     <div id="permanent">
+        <h1>Permanent Address:</h1>
+        <br>
+        <input type="checkbox" name="" id="">If same as Present Address <br>
+        <label for="">Care of:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br>
+        <label for="">Village:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="" id=""><br>
+        <label for="">District:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="" id=""><option value="">Select One</option></select><br>
+        <label for="">Upzilla:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br>
+        <label for="">Post office:</label>&nbsp;&nbsp;<input type="text"><br>
+        <label for="">Post Code:</label>&nbsp;&nbsp;&nbsp;<input type="text"><br>
+      
+     </div>
+     <hr>
+     <div id="email">
+        <label for="">Email if any:<sup>*</sup></label><input type="text"><br>
+        <label for="">Contact Mobile:<sup>*</sup></label><input type="text"><br>
+        <label for="">Retype Mobile:<sup>*</sup></label><input type="text"><br>
+
+     </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function with return type
+        function glassBowl(raw_chicken,masala){
+            let marinatedChicken=raw_chicken+masala;
+           return marinatedChicken;
+        }
+       let first= glassBowl(5,1);
+       function cookingBowl(first,water){
+             let cookedChicken=first+water;
+        return cookedChicken;
+       }
+       let second=cookingBowl(first,0);
+       function eatingPlate(second,rice){
+        console.log(`dinga is eating ${second} kg chicken and ${rice} kg rice`)
+       }
+       eatingPlate(second,1);
+
+        //  anonymous function
+       let glassBowl1=function(raw_chicken,masala){
+        let marinatedChicken=raw_chicken+masala;
+           return marinatedChicken;
+       }
+       let first1= glassBowl1(10,1); 
+       let cookingBowl1=function(first1,water1){
+        let cookedChicken=first1+water1;
+        return cookedChicken;
+       }
+       let second1=cookingBowl1(first1,0);
+       let eatingPlate1=function(second1,rice1){
+
+        console.log(`dinga is eating ${second1} kg chicken and ${rice1} kg rice`)
+       }
+       eatingPlate1(second1,3);
+
+       //anonymous function followed with call back function
+       function demo(num){
+        console.log(num)
+        num()
+       }
+       demo(
+        function(){
+            console.log("call back function")
+        }
+       )
+       function demo1(arg1,arg2,arg3){
+        let a=arg1(10)
+        console.log(a)
+        let b=arg2(10,a)
+           arg3(a,b)
+       }
+       demo1(
+        function(radius){
+          const pi=3.14;
+          let areaOfCircle=pi*radius*radius;
+          console.log(`area of circle is: ${areaOfCircle}`)
+          return areaOfCircle
+        },function(base,height){
+            let areaOfTriangle=0.5*base*height;
+            console.log(`areaOfTriangle is:${areaOfTriangle}`)
+            return areaOfTriangle
+        },function(length,breadth){
+            let areaOfRectangle=length*breadth;
+            console.log(`areaOfRectangle is:${areaOfRectangle}`)
+        }
+
+       )
+
+
+       function prepareChicken(arg1,arg2,arg3){
+        let a=arg1(5,1);
+        console.log(a);
+        let b= arg2(a,0);
+        console.log(b);
+        arg3(a,b);
+        
+
+       }
+       prepareChicken(function(raw_chicken,masala){
+        let marinatedChicken=raw_chicken+masala;
+           return marinatedChicken;
+       },function(first1,water1){
+        let cookedChicken=first1+water1;
+        return cookedChicken;
+       },function(second1,rice1){
+        console.log(`dinga is eating ${second1} kg chicken and ${rice1} kg rice`)
+        })
+    </script>
+</body>
+</html>

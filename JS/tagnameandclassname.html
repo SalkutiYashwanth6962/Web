@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO HEADING TAGS</h1>
+    <h1 class="abc">WELCOME TO HEADING TAGS</h1>
+    <h1>WELCOME TO HEADING TAGS</h1>
+    <h1 class="abc">WELCOME TO HEADING TAGS</h1>
+    <h1>WELCOME TO HEADING TAGS</h1>
+    <button onclick="abc()">click</button>
+
+    <!-- <h1>SELECT YOUR GENDER</h1>
+    <input type="radio" name="gen" value="FEMALE">FEMALE <br>
+    <input type="radio" name="gen" value="OTHERS">OTHERS <br>
+    <input type="radio" name="gen" value="MALE">MALE <br>
+    <button onclick="gen()"></button> -->
+
+    <script>
+        function abc(){
+            // let h1=document.getElementByTagName("h1");
+            // console.log(h1);
+            let h2=document.getElementsByClassName("abc")
+            console.log(h2);
+            // for(const i of h2){
+            //     console.log(i);
+            //     i.style.color="red";
+            //     i.style.backgroundcolor="blue";
+            //     console.log(h2[i]);
+            // }
+            for(i=0;i<=h2.length-1;i++){
+                h2[i].style.color="orange";
+                h2[i].style.backgroundcolor="blue";
+
+
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

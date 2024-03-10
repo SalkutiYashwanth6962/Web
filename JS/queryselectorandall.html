@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="abc" title="abc1" >Welcome to queryselector1</h1>
+    <h1 class="abc" title="abc2" >Welcome to queryselector2</h1>
+    <h1 class="abc" title="abc3" id="abcid" >Welcome to queryselector3</h1>
+    <h1 class="abc" title="abc4" >Welcome to queryselector4</h1>
+    <h1 class="abc" title="abc5" >Welcome to queryselector5</h1>
+    <button onclick="abc()">SUBMIT</button>
+    <script>
+        function abc(){
+            // let h1=document.querySelector("h1")
+            // console.log(h1);
+            // h1.style.color="deeppink";
+            
+            //let h1=document.querySelectorAll("h1")
+            //console.log(h1);
+          //  h1.style.color="deeppink";
+            // for (const h of h1) {
+            //     h.style.color="blue";
+                
+            // }
+            // for(i=0;i<=h1.length;i++){
+            //     h1[i].style.color="deeppink"
+            // }
+            //classname
+            //   let h1=document.querySelector(".abc")
+            //  console.log(h1);
+            //  h1.style.color="deeppink";
+            
+        //     let h1=document.querySelectorAll(".abc")
+        //     console.log(h1);
+        //   
+        //     for (const h of h1) {
+        //         h.style.color="blue";
+        //         h.style.backgroundColor="pink"
+                
+        //     }
+
+        //atttribute
+        // let h1=document.querySelector("[title='abc4']");
+        // h1.style.color="pink"
+        //id
+        let h1=document.querySelector("#abcid");
+        h1.style.color="pink"
+
+
+        }
+    </script>
+</body>
+</html>

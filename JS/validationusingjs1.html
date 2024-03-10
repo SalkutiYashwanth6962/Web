@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label,input{
+            display: block;
+        }
+        small{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <label for="name">Name</label><input type="text" id="name">
+    
+    <small id="s"></small><br>
+    
+    <button onClick="demo()">submit</button>
+    <script>
+        function demo(){
+           let name1= document.getElementById("name").value;
+           //console.log(name1);
+           let inp=document.getElementById("name");
+           //console.log(inp);
+           let s1=document.getElementById("s");
+           console.log(s1);
+           //s1.innerHTML=`username is : ${name1}`;
+           if(name1==""){
+            s1.innerHTML="please dont leave empty";
+            s1.style.color="red";
+            inp.style.border="2px solid red";
+           // s1.style.visibility="visible"
+           }
+           else if(name1.length<3|| name1.length>15){
+            s1.innerHTML=`invalid name`;
+            s1.style.color="green";
+            inp.style.border="2px solid green";
+            s1.style.visibility="visible"
+           }
+           else {
+            inp.style.border="2px solid green";
+            s1.innerHTML=`correctname`;
+            s1.style.color="green";
+            s1.style.visibility="hidden";
+           }
+        }
+    </script>
+</body>
+</html>

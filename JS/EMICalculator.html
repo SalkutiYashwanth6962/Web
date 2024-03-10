@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 600px;
+            flex-direction: column;
+
+        }
+        .parent{
+            width:100vw;
+            height: 50vh;
+            background-color: aqua;
+            font-size: 2em;
+        }
+        input{
+            height:30px;
+        }
+        .child{
+            width:30%;
+            height: 50%;
+            float :left;
+
+        }
+        [type="range"]{
+            padding:10px
+        }
+        button{
+            position:relative;
+            top:80px;
+            left:80%;
+            padding:20px 25px;
+            font-size: 1.5rem;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>EMI CALCULATOR</h1>
+    <div class="parent">
+        <div class="child">
+            <table>
+                <tr>
+                    <td>Amount you need <input type="text" size="15" id="amount"></td>
+                </tr>
+                <tr>
+                    <td><input type="range"  id="amountrange" min="50000" max="400000" onchange="amount()"></td>
+                </tr>
+                <tr>
+                    <td>&#8377;50,000  &nbsp;&nbsp;&nbsp;&nbsp;  &#8377;4,00,000  </td>
+                </tr>
+            </table>
+        </div>
+        <div class="child">
+            <table>
+                <tr>
+                    <td>For <input type="text" size="10" id="year">Years</td>
+                </tr>
+                <tr>
+                    <td><input type="range"  id="yearrange" min="1" max="5" step="0.1" onchange="year()"></td>
+                </tr>
+                <tr>
+                    <td>1year &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5year </td>
+                </tr>
+            </table>
+        </div>
+        <div class="child">
+            <table>
+                <tr>
+                    <td>Interest <input type="text" size="6" id="interest">%</td>
+                </tr>
+                <tr>
+                    <td><input type="range"  id="interestrange" min="10.5" max="21" step="0.1" onchange="interest()"></td>
+                </tr>
+                <tr>
+                    <td>10.5% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21% </td>
+                </tr>
+            </table>
+        </div>
+        <button onclick="calc()">CALCULATE</button>
+        <h1 id="abc"></h1>
+    </div>
+    <script>
+        function amount(){
+            document.getElementById("amount").value=document.getElementById("amountrange").value;
+        }
+        function year(){
+            document.getElementById("year").value=document.getElementById("yearrange").value;
+        }
+        function interest(){
+            document.getElementById("interest").value=document.getElementById("interestrange").value;
+        }
+        function calc(){
+            let P=Number(document.getElementById("amount").value);
+            //console.log(typeof P)
+            let N=Number(document.getElementById("year").value)*12;
+            let R=Number(document.getElementById("interest").value)/12/100;
+            EMI= Math.floor(P*R*Math.pow((1+R),N)/Math.pow((1+R),N)-1);
+            document.getElementById("abc").innerHTML=`Your Monthly EMI will be ${EMI} permonth`;
+        }
+    </script>
+</body>
+</html>

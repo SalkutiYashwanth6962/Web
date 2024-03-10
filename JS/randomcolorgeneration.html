@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+           align-items: center;
+           min-height: 600px;
+
+          flex-direction:column;
+          background-color: aqua;
+           
+        }
+        button{
+            border-radius: 20px;
+            padding:10px 20px;
+            font-size: 30px;
+        }
+        button:hover{
+            background-color: black;
+            color:white;
+            transform:scale(1.09,1.09);
+
+        }
+        h1{
+            font-size:60px;
+            font-style:italic;
+            color:orangered;
+            letter-spacing: 2px;
+            /* -webkit-text-stroke: 1px black; */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">HEXADECIMAL COLOR CODE  GENERATION</h1>
+    <h1 id="abc"></h1>
+    <h2 id="rgb"></h2>
+    <button onclick="colorgeneration2()">GENERATE COLOR</button>
+    <script>
+        function colorgeneration(){
+            let color='#';
+            let colorArr=['A','B','C','D','E','F','0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'];
+            
+            for(i=0;i<6;i++){
+              
+                let num=Math.floor(Math.random()*(colorArr.length));
+                console.log(num);
+                let c=colorArr[num]
+                console.log(c);
+                color+=c;
+                console.log(color)
+                document.getElementById("abc").innerHTML=color;
+                document.body.style.backgroundColor=color;
+
+
+            }
+            
+        }
+        function colorgeneration2(){
+            let c1=Math.floor(Math.random()*255);
+            let c2=Math.floor(Math.random()*255);
+            let c3=Math.floor(Math.random()*255);
+            document.getElementById("rgb").innerHTML=`rgb(${c1},${c2},${c3})`;
+            document.body.style.backgroundColor=`rgb(${c1},${c2},${c3})`;
+           
+        }
+       
+    </script>
+    
+</body>
+</html>

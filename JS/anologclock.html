@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(190, 186, 163);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 700px;
+            flex-direction: column;
+        }
+        .container{
+           position: relative;
+        }
+        .clock{
+            width: 300px;
+            height: 300px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock span{
+            position: absolute;
+            transform: rotate(calc(30deg*var(--a)));
+            inset: 10px;
+            text-align: center;
+        }
+        .clock span i{
+            transform: rotate(calc(-30deg*var(--a)));
+            display: inline-block;
+            color: white;
+            font-size: 23px;
+        }
+        .clock::before{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            z-index: 2;
+            border-radius: 50%;
+        }
+        .niddle b{
+            position: absolute;
+            width: 5px;
+            height: var(--h);
+            background-color: var(--c);
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .niddle{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        h1{
+            color: green;
+            font-size: 50px;
+            -webkit-text-stroke: 2px red;
+        }
+    </style>
+</head>
+<body>
+    <h1>ANOLOG CLOCK</h1>
+    <div class="container">
+        <div class="clock">
+            <div class="niddle" id="sec" style="--h:80px;--c:aqua;"><b></b></div>
+            <div class="niddle" id="sec" style="--h:70px;--c:green;"><b></b></div>
+            <div class="niddle" id="min" style="--h:60px;--c:red;"><b></b></div>
+            <span style="--a:1"><i>1</i></span>
+            <span style="--a:2"><i>2</i></span>
+            <span style="--a:3"><i>3</i></span>
+            <span style="--a:4"><i>4</i></span>
+            <span style="--a:5"><i>5</i></span>
+            <span style="--a:6"><i>6</i></span>
+            <span style="--a:7"><i>7</i></span>
+            <span style="--a:8"><i>8</i></span>
+            <span style="--a:9"><i>9</i></span>
+            <span style="--a:10"><i>10</i></span>
+            <span style="--a:11"><i>11</i></span>
+            <span style="--a:12"><i>12</i></span>
+        </div>
+    </div>
+    <script>
+        let hour=document.getElementById("hour")
+        let min=document.getElementById("min")
+        let sec=document.getElementById("sec")
+        function anologClock()
+        {
+            let date=new Date();
+            let h=date.getHours()
+            console.log(h)
+            let m=date.getMinutes();
+            console.log(m)
+            let s=date.getSeconds();
+            console.log(s)
+
+            // hours formula 
+            h1=30*h+m/2;
+            console.log(h1)
+            // minute formula
+            m1=6*m;
+            // sec formula
+            s1=6*s;
+            hour.style.transform=rotate(`${h1}deg`);
+            min.style.transform=rotate(`${m1}deg`)
+            sec.style.transform=rotate(`${s1}deg`)
+        }
+        anologClock()
+        setInterval(() => {
+            anologClock()
+        }, 1000);
+    </script>
+</body>
+</html>
+</body>
+</html>

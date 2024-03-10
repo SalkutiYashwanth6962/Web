@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+</head>
+<body>
+
+<button onclick="generateCertificates()">Generate Certificates</button>
+
+<script>
+  function generateCertificates() {
+    const excelData = [
+      { name: 'Yashwanth reddy', course: 'React Basics' },
+      { name: 'Navin reddy', course: 'JavaScript Fundamentals' },
+      // Add more data as needed
+    ];
+
+    const workbook = new ExcelJS.Workbook();
+    const worksheet = workbook.addWorksheet('Certificates');
+
+    worksheet.columns = [
+      { header: 'Name', key: 'name', width: 20 },
+      { header: 'Course', key: 'course', width: 20 },
+    ];
+
+    excelData.forEach((data) => {
+      worksheet.addRow(data);
+    });
+
+    const certificateContent = excelData.map((data) => `
+      <div>
+        <h1>Certificate of Completion for ${data.name}</h1>
+        <p>This is to certify that ${data.name} has successfully completed the course ${data.course}.</p>
+        <!-- Add more certificate content as needed -->
+      </div>
+    `).join('');
+
+    const certificatesDiv = document.createElement('div');
+    certificatesDiv.innerHTML = certificateContent;
+
+    
+    // Create a Blob from the HTML content
+    const blob = new Blob([certificatesDiv.outerHTML], { type: 'text/html' });
+
+    // Create a download link and trigger download
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'Certificates.html';
+    link.click();
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function areaOfCube(){
+            let side=15;
+            let areaOfCube = 6*side*side;
+            console.log(`area of cube is: ${areaOfCube}`) ;
+
+        }
+        areaOfCube();
+
+        function volumeOfCone()
+        {
+            const pi=3.14;
+            let radius=3;
+            let height=5;
+            let volumeOfCone=0.33*pi*radius*radius*height;
+            console.log(`Volume of Cone is: ${volumeOfCone}`) ;
+        }
+        volumeOfCone();
+
+        function areaOfSemiCircle(pi,radius){
+           let areaOfSemiCircle=0.5*pi*radius*radius;
+           console.log(`volume of semicircle is:${areaOfSemiCircle}`)
+        }
+        areaOfSemiCircle(3.14,5);
+        function volumeOfSphere(pi,radius){
+           let volumeOfSphere=1.33*pi*radius*radius*radius;
+           console.log(`volume of sphere is:${volumeOfSphere}`);
+
+        }
+        volumeOfSphere(3.14,8);
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            display: flex;
+            justify-self:center;
+            align-items: center;
+            min-height: 100vh;
+            /* background-color: black; */
+            background-image: url(./giphy.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* background-size: 100% 150%; */
+            color:white;
+            flex-direction: column;
+        }
+        div{
+            margin-top: 280px;
+            font-size: 20vh;
+            color:transparent;
+        }
+        div span{
+            animation:diwali 2s infinite ease-in-out;
+
+        }
+        @keyframes diwali {
+            0%{
+                color:white;
+                filter:blur(3px)hue-rotate(0deg);
+                text-shadow: 0px 0px 10px blueviolet,
+                0px 0px 40px deeppink,
+                0px 0px 80px deeppink,
+                0px 0px 120px blueviolet,
+                0px 0px 160px deeppink,
+                0px 0px 200px deeppink,
+                0px 0px 240px deeppink,
+                0px 0px 300px blueviolet,
+                0px 0px 400px deeppink;
+                -webkit-text-stroke:5px black;
+            }
+            100%{
+                color:white;
+                filter:blur(0px)hue-rotate(2000deg);
+                text-shadow: 0px 0px 30px deeppink,
+                0px 0px 40px deeppink,
+                0px 0px 80px deeppink,
+                0px 0px 120px deeppink;
+                -webkit-text-stroke:10px black;
+              
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>H</span>
+        <span>A</span>
+        <span>P</span>
+        <span>P</span>
+        <span>Y</span>
+        <span style="margin-left:10vh">D</span>
+        <span>I</span>
+        <span>W</span>
+        <span>A</span>
+        <span>L</span>
+        <span>I</span>
+    </div>
+    <audio src="./firework-show-short-64657.mp3" controls></audio>
+</body>
+</html>
