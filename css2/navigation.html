@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+
+        }
+        .container{
+            width:100%;
+            height:100px;
+            background-color: aqua;
+        }
+        .container .parent{
+            text-align:center;
+        }
+        .container .parent ul{
+            display:inline-flex;
+            padding: 30px;
+        }
+        .container .parent ul li{
+            padding: 25px;
+            list-style-type: none;
+            font-size: 20px;
+            cursor:pointer;
+        }
+        .container .parent ul li:hover{
+            color:magenta;
+        }
+        .child{
+            display: none;
+            position:fixed;
+        }
+        .container .parent ul li:hover .child{
+           display: block;
+        }
+        .container .parent ul li:hover .child ul {
+           display: block;
+           background-color: chartreuse;
+           color:black;
+           border-radius: 20px;
+           font-size: 40px;
+        }
+        .container .parent ul li:hover .child ul li:hover{
+           
+           background-color:maroon;
+           color:white;
+          
+           font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <ul>
+                <li>WEB-TECHNOLOGY<i class="fa fa-caret-down"></i>
+                <div class="child">
+                    <ul>
+                        <li>html</li>
+                        <li>css</li>
+                        <li>js</li>
+                    </ul>
+                </div>
+                
+                </li>
+                <li>COREJAVA <i class="fa fa-caret-down"></i>
+                    <div class="child">
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>js</li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>SQL<i class="fa-fa-caret-down"></i></li>
+                <li>JAVA LIBRARY<i class="fa-fa-caret-down"></i></li>
+                <li>ADVANCE JAVA<i class="fa-fa-caret-down"></i></li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

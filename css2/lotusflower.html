@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width:400px;
+            height:400px;
+            background-color: aqu;
+            position:relative;
+            top:300px;
+            left:600px;
+            animation: flower 20s infinite;
+        }
+        @keyframes flower {
+            from{
+                filter: hue-rotate(0deg);
+            }
+            
+        }
+        .common{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 100% 0px 100% 0px;
+            position:absolute;
+            left:100px;
+            top:-100px;
+            rotate:-45deg;
+            transition: all 20s;
+
+        }
+        #container:hover .child1{
+            rotate:-45deg;
+        }
+        #container:hover .child2{
+            rotate:-70deg;
+        }
+        #container:hover .child3{
+            rotate:-95deg;
+        }
+        #container:hover .child4{
+            rotate:-20deg;
+        }
+        #container:hover .child5{
+            rotate:5deg;
+        }
+        #box{
+            width: 230px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            left:90px;
+            top: -20px;
+            border-radius: 20px 20px 100px 100px;
+
+            /* padding:50px */
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="common child1"></div>
+        <div class="common child2"></div>
+        <div class="common child3"></div>
+        <div class="common child4"></div>
+        <div class="common child5"></div>
+        <div id="box"></div>
+    </div>
+</body>
+</html>

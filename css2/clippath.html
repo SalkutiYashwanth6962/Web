@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            display:flex;/*It will make the content to move on the another and center*/
+            justify-content: center;
+            align-items: center;
+            min-height: 300px;
+            position:relative;
+
+
+        }
+         span{
+            position:absolute;
+            font-size: 100px;
+        }
+        span:nth-child(1){
+           
+            -webkit-text-stroke:10px maroon ;
+            /*It is used to give styling like maroon border like styling to the text content*/
+        
+        }
+        span:nth-child(2){
+            color:aqua;
+            animation:color 10s infinite;
+       }
+       @keyframes color {
+        from{
+            clip-path: polygon(49% 20%, 76% 29%, 100% 20%, 100% 96%, 80% 96%, 51% 97%, 25% 96%, 0 96%, 0% 35%, 31% 33%);
+        }
+        to{
+            clip-path: polygon(51% 40%, 75% 58%, 97% 38%, 100% 96%, 80% 96%, 51% 97%, 25% 96%, 0 96%, 3% 47%, 26% 59%);
+
+        }
+        
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="s1">JSPIDERS</span>
+        <span>JSPIDERS</span>
+    </div>
+</body>
+</html>

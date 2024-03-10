@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+
+        }
+        .container{
+            height:100px;
+            width:100%;
+            background-color:aqua;
+        }
+        .container .parent{
+            text-align:center;
+        }
+        .container .parent ul{
+            display: inline-flex;
+            padding:30px;
+            font-size:30px
+        }
+        .container .parent ul li{
+            list-style-type: none;
+            padding:30px;
+        }
+        .container .parent ul li:hover{
+            color:red;
+
+        }
+        .child{
+            display:none;
+            position: fixed;
+        }
+        .container .parent ul li:hover .child {
+            display:block;
+            background-color: chartreuse;
+            border-radius: 20px;
+            color:darkgreen;
+        }
+        .container .parent ul li:hover .child ul{
+            display:block;
+           
+        }
+        .container .parent ul li:hover .child ul li:hover{
+            background-color: red;
+            color:blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parent">
+            <ul>
+                <li>Java
+                    <div class="child">
+                        <ul>
+                            <li>Servlets</li>
+                            <li>Jsp</li>
+                            <li>jdbc</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Web Development
+                    <div class="child">
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>js</li>
+                        </ul>
+                    </div>
+                </li>
+                <li>Frame works
+                    <div class="child">
+                        <ul>
+                            <li>spring</li>
+                            <li>sringboot</li>
+                            <li>springmvc</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

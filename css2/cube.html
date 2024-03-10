@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:600px;
+            height:600px;
+            background-color: aqu;
+            position:relative;
+            left:300px;
+            top:100px;
+            perspective: 800px;
+            /*(merge) The perspective property defines how far the object is away from the user. 
+            So, a lower value will result in a more intensive 3D effect than a higher value. */
+            perspective-origin: top right;
+            /* it is user perspective from which side the user has to see*/
+            /* perspective-origin: 30% 90%; */
+        }
+        .cube{
+            width:300px;
+            height:300px;
+            position:absolute;
+            transform-style: preserve-3d;
+            /*Indicates that the children of the element should be positioned in the 3D-space.*/
+        }
+        .sides{
+            width:100%;
+            height:100%;
+            background-image: radial-gradient(orangered,#234);
+            position:absolute;
+            left:150px;
+            top:100px;
+             /* opacity: 0.2;  */
+
+        }
+        .front{
+            transform:translatez(150px);
+        }
+        .back{
+            transform:translateZ(-150px);
+        }
+        .top{
+            transform:rotateX(90deg)translateZ(150px);
+            
+        }
+        .bottom{
+             transform:rotateX(90deg)
+             translateZ(-150px);
+        }
+        .left{
+            transform: rotateY(90deg)
+            translateZ(150px); 
+        }
+        .right{
+             transform: rotateY(90deg)
+             translateZ(-150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="sides front"></div>
+            <div class="sides back"></div>
+            <div class="sides top"></div>
+            <div class="sides bottom"></div>
+            <div class="sides left "></div>
+            <div class="sides right"></div>
+        </div>
+    </div>
+</body>
+</html>

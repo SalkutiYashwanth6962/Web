@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #translate{
+            width:200px;
+            height:200px;
+            background-color: aqua;
+            position:relative;
+            left:200px;
+            top:150px;
+            transition:all 5s;
+        }
+        #translate:hover{
+            /* transform:translateX(200px);
+            transform:translateY(-200px); */
+            /* transform:translateZ(200px); */
+            /* transform: rotateX(90deg); */
+            /* transform: rotateY(90deg);  */
+            /* transform: rotateZ(30deg); */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(1.5); */
+           
+            /* transform: skewX(30deg); */
+            /* transform: skewY(30deg); */
+            transform:skew(40deg,60deg)
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="translate"></div>
+</body>
+</html>

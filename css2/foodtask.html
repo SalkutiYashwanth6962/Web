@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin:0px;
+        }
+        #a{
+            height:110px;
+            width:100%;
+            background-color: brown;
+            background-image: url(./food/logo.png);
+            background-repeat: no-repeat;
+            background-size: 120px ;
+            background-position: 5px ;
+        }
+        #b{
+            height: 90px;
+            width:100%;
+            background-color: white;
+            font-size: 30px;
+            position: sticky;
+            top: 0px;
+            
+           
+           
+        }
+        #b li{
+            display: inline-block;
+            padding: 28px;
+           
+        }
+        #b select{
+            height: 40px;
+            font-size: 20px;
+            border: none;
+        }
+        
+        #c  {
+            
+            height: 550px;
+            width: 100%;
+            background-color: aqua;
+            background-size: 100% 550px;
+            
+
+            background-color: aqua;
+            background-image: url(./food/30BbbTFoodFood-Chefs.jpg),url(./food/Cook-Smart_D.png);
+            background-size: 100% 550px,100% 550px;
+            background-repeat: no-repeat;
+            position:relative;
+            /* left: -2000px; */
+            background-repeat: no-repeat;
+            
+            
+        }
+        .slide-content{
+            position: absolute;
+            display:flex ;
+            
+            
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes slide {
+            10%{
+            transform: translateX(0px);
+            }
+            30%{
+            transform: translateX(-800px);
+            }
+            60%{
+            transform: translateX(-1600px);
+            }
+            
+        }
+        #h,#i,#j,#k{
+            width: 25%;
+             height:300px;
+            
+             float:left
+        }
+        #h{
+            background-color: skyblue;
+            background-image: url('./food/cuisine.png');
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-position: 90px 5px;
+            font-size: 50px;
+            text-align: center;
+            transition: all 2s;
+            
+        }
+        #h:hover{
+            background-size: 350px 220px;
+        }
+        #i{
+            background-color: lightgreen;
+            background-image: url('./food/ingredience.png');
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-position: 90px 5px;
+            font-size: 50px;
+            text-align: center;
+            transition: all 2s;
+            
+        }
+        #i:hover{
+            background-size: 350px 220px;
+        }
+        #j{
+            background-color: orange;
+            background-image: url('./food/meal-&-course.png');
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-position: 90px 5px;
+            font-size: 50px;
+            text-align: center;
+            transition: all 2s;
+            
+        }
+        #j:hover{
+            background-size: 350px 220px;
+        }
+        #k{
+            background-color:red;
+            background-image: url('./food/chef.png');
+            background-repeat: no-repeat;
+            background-size: 300px 200px;
+            background-position: 90px 5px;
+            font-size: 50px;
+            text-align: center;
+            transition: all 2s;
+            
+        }
+        #k:hover{
+            background-size: 350px 220px;
+        }
+        #container{
+            width:100%;
+            height:100px;
+            background-color: WHITE;
+            position: sticky;
+            top: 0px;
+        }
+        #container #parent{
+            text-align: center;
+        }
+        #container #parent ul{
+            display: inline-flex;
+            padding: 10px;
+        }
+        #container #parent ul li{
+            list-style-type: none;
+            padding: 30px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        #container #parent ul li:hover{
+            color:red;
+        }
+        .child{
+            display:none;
+            position:fixed;
+        }
+        #container #parent ul li:hover .child{
+            display:block;
+            
+        }
+        #container #parent ul li:hover .child ul{
+            display:block;
+            background-color: #ffffff;
+            color: black;
+            border-radius: 5px;
+            
+        }
+        #container #parent ul li:hover .child ul li:hover{
+            display:block;
+            background-color:maroon;
+            color:white;
+           
+            
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="container">
+        <div id="parent">
+        <ul >
+           <li>HOME</li>
+           <li>CHEFS &nbsp;<i class="fa fa-caret-down"></i>
+            <div class="child">
+                <ul>
+                    <li>MASTERCHEF SANJEEV KAPOOR</li>
+                    <li>CHEF HARPAL SINGH SOKHI</li>
+                    <li>CHEF AMRITHA RAICHAND</li>
+                    <li>CHEF RAKHEE VASWANI</li>
+                    <li>CHEF SANJAY GUPTA</li>
+                    <li>CHEF ANUPA DAS</li>
+                    <li>CHEF SHILARANA VAZE(CHINU)</li>
+                    <li>CHEF SHANTANU GUPTE </li>
+                    <li>CHEF RAKESH SETHI</li>
+                    <li>CHEF SARANSH GOILA</li>
+                    <li>CHEF SHAILENDRA KEKADE</li>
+                    <li>CHEF SHIPRA KHANNA</li>
+                    <li>CHEF SHAZIA KHAN</li>
+                    <li>CHEF VICKY RATNANI</li>
+                    <li></li>
+                </ul>
+            </div>
+           </li>
+           <li>SHOWS&nbsp;<i class="fa fa-caret-down"></i>
+            <div class="child">
+                <ul>
+                    <li>SANJEEV KAPOOR'S KITCHEN</li>
+                    <li>COOK SMART</li>
+                    <li>TURBAN TADKA</li>
+                    <li>MUMMY KA MAGIC</li>
+                    <li>TEA TIME</li>
+                    <li>STYLE CHEF</li>
+                    <li>HEALTH MANGE MORE</li>
+                    <li>FIRANGI TADKA</li>
+                    <li>FOOD THIS WEEK</li>
+                    <li>SUNNY SIDE UP</li>
+                    <li>THE POOJA MAKHIJA SHOW</li>
+                    <li>FLAB Q</li>
+                    <li>MAA KI DAL BY CHEF SINGH SOKHI</li>
+                    <li>HI TEA</li>
+                    <li>OUT OF WORLD</li>
+                    <li>THE FIT FOODIE</li>
+                    <li>HERBS AND SPICE</li>
+                    <li>HEALTHY FRIDGE</li>
+                    <li>DAAL DHAMAL</li>
+                    <li>INDIA UNLIMITED</li>
+                    <li>HEALTH MAGAZINE</li>
+                    <li>PURE SIN</li>
+                    <li>K FOR KIDS</li>
+                    <li>HEALTH CHALLENGE</li>
+                </ul>
+            </div>
+           </li>
+           <li>RECIPES&nbsp;<i class="fa fa-caret-down"></i>
+            <div class="child">
+                <ul>
+                    <li>COURSE</li>
+                    <li>CUISINE </li>
+                    <li>OCCASION</li>
+                    <li>INGREDIENTS</li>
+                    <li>MEAL TYPE</li>
+                    <li>DIET</li>
+                    <li>SHOW</li>
+                </ul>
+            </div>
+           </li>
+           <li>VIDEOS&nbsp;<i class="fa fa-caret-down"></i>
+            <div class="child">
+                <ul>
+                    <li>COURSE</li>
+                    <li>CUISINE </li>
+                    <li>OCCASION</li>
+                    <li>INGREDIENTS</li>
+                    <li>MEAL TYPE</li>
+                    <li>DIET</li>
+                    <li>SHOW</li>
+                    <li>SEASON</li>
+                </ul>
+            </div>
+           </li>
+           <li>FOOD JOURNAL&nbsp;<i class="fa fa-caret-down"></i>
+            <div class="child">
+                <ul>
+                    <li>ARTICLES</li>
+                    <li>HEALTH TIPS</li>
+                    <li>FAQ</li>
+                    <li>FUN FOOD FACTS</li>
+                    <li>FOOD GLOSSARY</li>
+                </ul>
+            </div>
+           </li>
+           <li>BLOG</li>
+           <li>ABOUT US</li>
+           <li>CONTACT US</li>
+           <li>SIGN IN</li>
+           
+        </ul>
+       </div>
+    </div>
+    <div id="c" >
+       
+        <!-- <input type="text"><i class="fa-solid fa-magnifying-glass"></i> -->
+        <ul type="none" class="slide-content">
+            <li style="background-image: url(./food/30BbbTFoodFood-Chefs.jpg);"></li>
+            <li style="background-image: url(./food/rqM1JYChefs-Rasoi.jpg);"></li>
+            <li style="background-image: url(./food/uhea3hBake-Diaries.jpg);"></li>
+        </ul>
+
+    </div>
+    <div>
+        <div id="h" >
+          
+            <br><br><br><br>
+
+          <h4>Cuisine</h4>
+        </div>
+        <div id="i" >
+            
+            <br><br><br><br>
+          <h4>Ingredients</h4>
+        </div>
+        <div id="j" >
+            <br><br><br><br>
+          <h4>Meals</h4>
+        </div>
+        <div id="k" >
+            <br><br><br><br>
+            <h4>Occasion</h4></div>
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, fugit nemo? Nemo quis eveniet est rem expedita beatae veniam dolor ad. Molestiae commodi ullam dolorum itaque et in velit quo tempora facilis nobis corrupti suscipit sit ipsum, officia eaque soluta necessitatibus voluptates ad odit neque voluptas. Vero, eum. Voluptatum minus eligendi exercitationem nihil. Illum, reprehenderit eligendi quasi asperiores vitae deserunt temporibus veritatis perspiciatis officiis, nesciunt molestiae sit vero fuga in dolorum, quae tenetur maxime hic excepturi voluptatem consequuntur nobis amet quaerat! Deserunt ipsam ex provident. Officiis, harum facere sit fugit vitae voluptas nam dignissimos numquam consequuntur tempore amet. Odit illum dolor aliquam esse? Doloribus omnis aut molestiae eligendi consequatur repudiandae, earum non nam nobis, dolores aliquid fugiat, vero tempora nisi! Deserunt, neque omnis fugiat ducimus iste cum debitis repellendus quisquam odio reprehenderit culpa, nisi quae, libero aliquam nesciunt officiis fugit laboriosam distinctio voluptatum ut nemo a. Doloribus, quas? Nisi, corrupti mollitia? Aperiam distinctio cum facilis fugit excepturi consequuntur voluptates voluptatum ea perferendis reprehenderit, delectus veniam, soluta illo vero repellat ex aut beatae iure commodi odit quam numquam quia, suscipit unde? Expedita voluptas nulla modi ut fugit nihil, aperiam maiores, eius amet dolorem est, veritatis perferendis quisquam sunt! Harum molestiae debitis commodi. Suscipit fugiat vero molestiae eaque magni incidunt quisquam aperiam minima maxime enim eos quaerat, autem exercitationem velit aut voluptates? At nostrum cumque, suscipit consequatur eveniet aliquid ullam, consectetur atque deserunt quibusdam rem quam dicta, dignissimos excepturi doloremque placeat explicabo quod id velit! Blanditiis quam ducimus sapiente iusto voluptatum voluptate fugit deleniti doloremque iste repellendus laboriosam a nisi, ut ea sed est illum corporis quisquam sint odio, iure, amet animi itaque! Voluptas iure incidunt temporibus mollitia. Expedita, iste perferendis. Quod, ipsa dicta debitis laborum aliquam pariatur facere neque deleniti ea blanditiis, error esse voluptas doloremque magni nulla aspernatur nostrum. Suscipit, reprehenderit? Distinctio nihil eum ex illum suscipit voluptatibus similique totam error a reprehenderit, veniam repudiandae eaque, ullam hic. Dolore deserunt animi, adipisci ducimus temporibus voluptate distinctio deleniti quia dolor reprehenderit neque ratione veniam corporis minus voluptas? Aperiam doloremque aut enim recusandae tempora. Quod dolor, iure praesentium aliquam exercitationem, maxime fugiat libero deserunt eos enim officiis molestias consectetur similique amet ipsum tempore accusantium id quo quam? Odio in assumenda illo quo, molestiae fugiat impedit soluta vero. Quibusdam ratione aliquam unde optio dignissimos, obcaecati quo. Molestiae eos itaque doloribus perferendis unde error maxime necessitatibus, dolorum sequi repellat quaerat dolorem vero amet magnam nesciunt voluptatem modi quod esse cupiditate inventore reiciendis maiores. Sint nesciunt nostrum possimus in exercitationem, incidunt ea dolore voluptatum, quasi veritatis praesentium eum deleniti minima tempore reiciendis veniam aliquid a minus doloremque totam suscipit vitae? Sit porro reprehenderit cupiditate inventore eaque ducimus distinctio eum repellendus illum, impedit modi deleniti eos veniam minima earum vel nesciunt enim placeat autem facilis libero blanditiis corrupti? Dicta ut perferendis suscipit quas quos aperiam, unde delectus rem animi magni illo quam quibusdam? Quia impedit vero cumque sequi? Deserunt laudantium cumque culpa nisi architecto distinctio numquam a, reprehenderit veniam cum odio aperiam voluptate natus, minima atque ipsum quos. Harum nam reprehenderit obcaecati saepe iste asperiores nobis sed excepturi consequuntur praesentium est ut sint, tempora aperiam quo perferendis animi ab voluptatibus quam sunt quis! Odit, delectus. Molestiae, nemo aut corporis obcaecati atque itaque unde totam doloribus voluptate ea iusto, qui odio sint veritatis at, minus ducimus? Quod molestiae aut amet mollitia nobis magni dolore qui, inventore eligendi beatae eum expedita velit deleniti veniam quia minima, adipisci nemo voluptatem neque libero. Aspernatur aliquid cumque odit recusandae voluptate architecto obcaecati distinctio quos nihil aliquam temporibus exercitationem sunt non, numquam ullam explicabo cum incidunt quis praesentium, inventore debitis necessitatibus dolorum assumenda. Itaque voluptate, illum ullam unde error saepe deleniti nihil. Officia nemo repellat earum accusamus deleniti neque, repellendus, cumque maiores expedita dolore quae eligendi labore cum laborum natus commodi error nesciunt quas impedit perferendis doloribus aliquid! Voluptates consequatur labore minima minus quibusdam! Repudiandae, exercitationem dolorem fuga quo similique possimus consectetur fugiat, totam eaque distinctio vero voluptate necessitatibus cumque laboriosam quisquam. Magni quod nisi sunt voluptatem laudantium provident dolor quam nihil consequuntur vitae maxime inventore labore at molestias repellat, obcaecati eaque optio? Eius culpa magnam numquam repellat. Asperiores esse quisquam veniam. Tempora laboriosam consectetur vel assumenda quos commodi nulla autem pariatur, ratione architecto officia odit. Quidem voluptatibus quod maiores harum, laboriosam consectetur eum ducimus, sunt modi magni alias dolores expedita corrupti impedit pariatur voluptas deserunt asperiores sit dicta maxime. Incidunt laboriosam enim repudiandae id officiis soluta maxime sapiente adipisci inventore cumque aspernatur quam fugit provident quasi mollitia expedita nostrum consectetur magni autem, assumenda quo consequatur qui! Expedita aut vel libero repellat sed dolor facere ex iste exercitationem labore eligendi soluta laboriosam atque, recusandae consequuntur fuga autem dolores quibusdam, rem laborum maxime ipsam. Officia ipsam numquam odio provident ratione delectus modi quos ea esse hic, totam earum reprehenderit quisquam itaque, quo deserunt possimus iste optio error. Ut eligendi, ipsum voluptatem quo ea porro minima nisi nam unde, incidunt minus. Reiciendis et eum perferendis neque odio voluptatem, optio iure facilis ipsa debitis libero? Amet quos sint totam incidunt optio similique blanditiis dolorem, mollitia, explicabo maxime animi! Porro unde optio, recusandae, incidunt non natus veniam architecto distinctio voluptatum veritatis alias praesentium minima expedita vel fugiat corrupti magnam tenetur molestiae repellendus. Fugit perferendis, earum, aliquam consectetur recusandae dolorum perspiciatis hic impedit neque delectus maxime iusto quis itaque fuga illo alias in voluptatibus nisi unde placeat officia eius eligendi minus. Expedita deserunt corrupti aperiam consequatur eos, impedit quaerat inventore voluptas, sapiente pariatur nulla distinctio eius provident labore necessitatibus repellat mollitia, aspernatur soluta laudantium quam iusto. Modi minus veritatis neque illum vero labore eaque quis cumque explicabo sapiente dolores ratione voluptates expedita, ab mollitia facilis molestiae reiciendis laudantium quam quas. Ipsa nostrum nisi dolor. Molestias reiciendis suscipit laborum sed amet voluptatibus rem, cumque ipsum dolor minima saepe perspiciatis iusto obcaecati dolores deserunt neque! Voluptates corrupti, rem adipisci quas eum dolorum nemo inventore ipsa tenetur esse animi laudantium quidem? Fugit dolorem, voluptates ipsum quae nostrum mollitia vitae officiis totam praesentium dolor ducimus deleniti placeat veritatis, delectus hic. Omnis?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate earum minus voluptates vitae eveniet dignissimos, qui modi. Fugiat expedita minus consequuntur facilis sed veniam excepturi reprehenderit architecto quod maiores molestiae vitae modi debitis iure error omnis iste deserunt, totam officia cupiditate neque. Ratione ex ipsum doloribus ut qui omnis deserunt laudantium mollitia maxime fugiat dolore nulla eum magni, dolorem esse laborum impedit quas animi voluptatem earum. Cumque vero vitae officia commodi, quaerat aspernatur repellendus expedita libero enim officiis natus laborum dolores asperiores aperiam culpa non aut voluptas atque nam aliquid, velit minima fuga deserunt! Aliquam, repellat quisquam. Ducimus minus eligendi fugit error, velit aliquid numquam corporis quos eum, quasi dolor est hic cumque voluptate nulla officiis nihil veritatis exercitationem voluptatum quae dolorem pariatur! Sapiente autem, culpa, nemo dolorem odit voluptatum quo placeat accusamus molestiae facilis architecto saepe perspiciatis officiis omnis? Quia incidunt assumenda placeat voluptatibus tempore autem, unde, quibusdam dignissimos, necessitatibus qui vitae consequatur sunt nam velit. Veritatis eius aliquid, adipisci facilis reiciendis aspernatur recusandae omnis obcaecati ratione autem repellat velit cum provident ad eum non sint ipsum est atque. Suscipit dolorum tempore fugit necessitatibus tempora eum aspernatur illo debitis nam blanditiis quidem praesentium magni, ullam, autem enim ex iusto, nihil deleniti officia pariatur. Recusandae ducimus mollitia corporis nobis sapiente? Ratione aspernatur ad deleniti voluptates provident, reprehenderit temporibus id a. Hic fugiat, incidunt repellendus illum quidem deleniti corporis facere illo beatae assumenda nemo ex laborum consequuntur fuga placeat est aperiam accusamus labore temporibus ipsa similique tempore provident! Sequi nostrum asperiores, nihil sit provident labore voluptatibus similique quasi eaque ea tempora veniam illo placeat eligendi consectetur fuga, dolores iste saepe sunt eum. Similique quae soluta assumenda temporibus cum perspiciatis repellendus dolorem mollitia, incidunt reprehenderit vero fugiat veritatis voluptas quos sint voluptatem corporis iste excepturi dignissimos! Eveniet assumenda quibusdam unde ullam reiciendis, fuga et tempora totam voluptate rerum! Fugiat dolor, adipisci asperiores nam repudiandae excepturi ipsa ipsam iste laudantium, ab maiores deleniti impedit, beatae culpa. Atque aliquam rem culpa nulla blanditiis totam impedit ipsum repellendus, officiis quae suscipit, ducimus amet iure voluptates sequi? Ipsum molestias dignissimos sint ab, quasi quisquam nostrum quaerat consequatur vel necessitatibus ratione suscipit repellendus perferendis excepturi aspernatur id officiis praesentium molestiae laborum deleniti ullam aperiam saepe. Delectus consequuntur ullam, facere perferendis, officiis harum similique exercitationem reiciendis, numquam quos sed omnis sapiente. Aspernatur, maxime nesciunt et consequatur soluta beatae fuga expedita perspiciatis, sapiente veritatis natus tenetur error ipsam autem. Molestias porro alias repellat officia saepe dicta quia amet reiciendis, vero itaque, culpa eaque. Possimus consequatur laborum eum quam unde nemo quas dignissimos, cum a nisi mollitia reiciendis deleniti magnam odit officiis maxime suscipit rem non doloremque tempore nulla! Quaerat explicabo aperiam cum iure dolorem doloremque nam, officiis odit, quas voluptates quisquam culpa, accusamus quam libero. Perferendis blanditiis a, accusamus numquam voluptatem eius impedit, optio nesciunt tempora quasi quae in facilis molestiae sit, ducimus adipisci facere nihil suscipit esse dicta necessitatibus sapiente error. Id voluptates, impedit, corporis commodi molestias ipsa iste harum exercitationem numquam nesciunt libero sed quam nihil blanditiis laboriosam repellendus veritatis, fugiat mollitia aliquam? Nisi provident labore laudantium, iusto earum, aperiam tenetur magni eveniet sapiente nulla culpa. Maxime perspiciatis autem incidunt non. Quas ea molestiae in ipsa, aperiam quisquam quaerat sint voluptates illo error facilis tenetur! Architecto, molestias optio. Modi dolorum molestiae nulla, tenetur ex libero, expedita reprehenderit eaque illo sunt aspernatur quo tempora repellat vero, laboriosam doloremque ab fugit possimus quia laudantium. Nostrum perferendis similique aperiam voluptas temporibus optio harum possimus, ab iure. Officiis, repellendus rerum! Eius rem quasi minus voluptas quaerat laborum exercitationem commodi harum, modi quia? Veniam enim aliquam est perspiciatis. Odit, qui eius! Placeat pariatur, eligendi totam sapiente blanditiis quaerat distinctio illum expedita aperiam cum id quam provident exercitationem maxime reprehenderit quas quisquam! Sit maiores laborum maxime doloribus vitae vel rerum facilis quod nisi! Perspiciatis distinctio veritatis velit dolore nulla voluptate consectetur, quas dolor ducimus et inventore sunt. Autem, odio. Nisi voluptatem voluptas id distinctio dolorum, deleniti neque esse odit qui? Unde adipisci similique pariatur ut voluptas dolore omnis doloremque consequatur veniam repellat nostrum quos dolores modi nulla corporis, deleniti nihil mollitia, temporibus beatae neque officia consectetur at sed quia. Facere, eius eaque sequi veritatis, delectus quidem adipisci atque expedita quia illum dicta error illo. Saepe temporibus dignissimos itaque, dolore, veritatis assumenda atque explicabo hic ea mollitia similique veniam laudantium, accusamus repellat dolorum delectus reiciendis laboriosam repudiandae iure sint culpa sequi eos magni sapiente? Distinctio tempore unde temporibus magnam aut, asperiores architecto laboriosam similique maxime ut doloribus eaque quasi? Soluta harum tempora quod quos vitae sunt officia a nesciunt veritatis consequatur fugiat saepe quas repellat neque doloribus beatae minima esse magni fuga qui id, et aspernatur error. Laudantium quibusdam delectus aperiam nemo dolor quia cumque ipsa ab eligendi sit? Et magnam vero iusto delectus consequatur minima adipisci. Vitae consequatur alias exercitationem, enim quod facilis asperiores tempora! Ea ratione voluptatibus maiores voluptates corporis, eligendi architecto illum sit, molestias libero culpa quis adipisci harum animi ipsam reiciendis facilis! Eos, architecto dolore omnis vel recusandae sed quia? Incidunt nulla sed quo, voluptatum fuga amet, optio quae distinctio minus necessitatibus quibusdam libero nesciunt laudantium facere debitis impedit voluptates doloribus, at sapiente praesentium repellat possimus consectetur. Tempora aut fugit ab corrupti obcaecati fugiat autem vitae eaque magni id culpa assumenda ratione earum similique quisquam illum dolore minima, iure vero sed, possimus velit? Magnam, quia suscipit alias doloribus nam dicta aspernatur dolor obcaecati rem sunt sit nihil assumenda sequi itaque est saepe similique natus nesciunt exercitationem excepturi dolores! Similique in soluta obcaecati distinctio praesentium eius, fuga aperiam saepe omnis, nesciunt adipisci cum? Unde, deserunt dolorem amet eaque, recusandae, voluptatum ipsum eos suscipit tempora consequatur vitae quidem saepe laudantium qui ex quas corrupti architecto? Est cumque quia provident autem quam animi delectus eius, impedit enim magnam quis. Vel earum consectetur distinctio adipisci ducimus ipsam nobis tenetur fugiat, sed modi cumque pariatur possimus numquam itaque et consequuntur harum ipsum cum maxime quo ea accusamus necessitatibus cupiditate veritatis? Maxime repudiandae reiciendis unde id placeat, atque quod quis ipsum amet quas vel facilis commodi?
+</body>
+</html>

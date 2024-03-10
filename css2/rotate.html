@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a{
+            width:500px;
+            height: 500px;
+            background-color: aqua;
+            position: relative;
+            top:300px;
+            left:800px;
+            /* transition-property: rotate;
+            transition-delay: 20s;
+            transition-duration: 20s; */
+            /* transition:border-radius 20s, background-color 10s,rotate 20s */
+            transition:all 5s;
+            transition-delay: 1s;
+            float:left;
+        }
+        #a:hover{
+            border-radius: 100%;
+            background-color: orangered;
+            rotate:-45deg;
+        }
+        #b{
+            font-size: 50px;
+            transition: all 5s;
+            float:left;
+        }
+        #b:hover{
+            
+            color: orangered;
+            rotate:45deg;
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="a"></div><br>
+    <div id="b"><h1>YASHWANTH</h1></div>
+</body>
+</html>
