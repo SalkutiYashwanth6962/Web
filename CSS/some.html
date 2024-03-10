@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1">
+    <input type="text" name="" id="inp2">
+    <h1 id="a"></h1>
+    <h1 id="a1"></h1>
+    <h1 id="a2"></h1>
+    <h1 id="a3"></h1>
+    <button onclick="display()">submit</button>
+    <script>
+        function display()
+        {
+            let num1 = document.getElementById("inp1").value;
+            let num2 = document.getElementById("inp2").value;
+            let s=Math.sqrt(num1)
+            let b=Math.cbrt(num2)
+            let p=Math.pow(num1,num2)
+            let h=Math.hypot(num1,num2)
+            let i=Math.PI;
+            console.log(i);
+            console.log(Math.exp(1));
+            console.log(Math.max(10,20,30,350,9,0))
+            document.getElementById("a").innerHTML=square root of ${num1} is ${s};
+            document.getElementById("a1").innerHTML=cube root of ${num2} is ${b};
+            document.getElementById("a2").innerHTML=` power is ${p}`;
+            document.getElementById("a3").innerHTML=hypotenuse of ${num1} and ${num2} is ${h};
+            
+            //trignomerty
+            //sin
+            console.log(Math.sin(0))
+            console.log(Math.sin((Math.PI)/6).toFixed(4))
+            console.log(Math.sin((Math.PI)/4).toFixed(4))
+            console.log(Math.sin((Math.PI)/3).toFixed(4))
+            console.log(Math.sin((Math.PI)/2).toFixed(4))
+            console.log("--------------")
+            //cos
+            console.log(Math.cos(0))
+            console.log(Math.cos((Math.PI)/6).toFixed(4))
+            console.log(Math.cos((Math.PI)/4).toFixed(4))
+            console.log(Math.cos((Math.PI)/3).toFixed(4))
+            console.log(Math.cos((Math.PI)/2).toFixed(4))
+            console.log("------------")
+            //tan
+            console.log(Math.tan (0))
+            console.log(Math.tan((Math.PI)/6).toFixed(4))
+            console.log(Math.tan((Math.PI)/4).toFixed(4))
+            console.log(Math.tan((Math.PI)/3).toFixed(4))
+            console.log(Math.tan((Math.PI)/2).toFixed(4))
+
+            //ceil value
+            let n=Math.random()
+                console.log(n)
+                let r=Math.round(n)
+                console.log(r)
+                
+            let m1=n*10;
+                let r1=Math.round(m1)
+                console.log(m1)
+                console.log(r1)
+                console.log("--------------")
+                //ceil and floor
+
+                let k=Math.random()*10
+                
+                let c1=Math.ceil(k)
+                console.log(c1)
+                console.log(k)
+                let f1=Math.floor(k)
+                console.log(f1)
+        }
+        display()
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ol type="i" start="9">
+        <li>o</li>
+        <li>r</li>
+        <li>t</li>
+    </ol>
+    <script>
+    let ulist=document.createElement("ol")
+    let li=document.createElement("li")
+    let li1=document.createElement("li")
+    li.innerHTML=`java`;
+    li1.innerHTML=`python`;
+    ulist.appendChild(li);
+    ulist.appendChild(li1);
+    console.log(ulist);
+    // console.log(li);
+    document.body.append(ulist);
+</script> -->
+
+<script>
+    let ol=document.createElement("ol");
+    ol.type="a";
+    ol.start="4";
+    console.log(ol);
+    let arr=["html","css","js","react js"];
+    for(i=0;i<=arr.length-1;i++){
+        let li=document.createElement("li");
+        li.innerHTML=arr[i];
+        console.log(li);
+        ol.append(li);
+
+    }
+    document.body.append(ol);
+
+
+    // let ol1= document.createElement("ol");
+    // ol1.type="a";
+    // ol1.start="4";
+
+    // let arr1=["html","css","js"];
+    // for(i=0;i<arr1.length;i++){
+    //     let li1=document.createElement("li");
+    //     li1.innerHTML=arr1[i];
+    //     ol1.append(li1);
+    // }
+    // document.append(ol1);
+</script>
+</body>
+</html>

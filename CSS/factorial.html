@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Factorial Program</h3>
+    <label for="">Enter any number</label><input type="text" id="input">
+    <small id="s1"></small><br>
+    <button onclick="demo1()">submit</button>
+<p>======================================</p>
+    <h3>Palindrome Program</h3>
+    <label for="">Enter any number</label><input type="text" id="input2">
+    <small id="s2"></small><br>
+    <button onclick="demo2()">submit</button>
+    <p>======================================</p>
+    <h3>Armstrong Number</h3>
+    <label for="">Enter any number</label><input type="text" id="input3">
+    <small id="s3"></small><br>
+    <button onclick="demo3()">submit</button>
+
+    <script>
+       function demo1(){
+            let inp= document.getElementById("input").value;
+        let s1=document.querySelector("#s1")
+        var i;
+        var fact=1;
+        for(i=1;i<=inp;i++){
+            fact=fact*i;
+           
+        }
+        console.log(i);
+        
+        if(i==0){
+            return 1;
+        }
+        s1.innerHTML=`${fact}`;
+        }
+       
+         function demo2() {
+            var inp2= document.getElementById("input2").value;
+            let s2=document.querySelector("#s2") ;
+            var temp=inp2;
+            var rem;
+            var sum= 0;
+            while(inp2>0){
+                rem=inp2%10;
+                    inp2=parseInt(inp2/10);
+                    sum=sum*10+rem;
+                    
+                
+            }
+            if(sum==temp){
+                //console.log(sum);
+                console.log("palindrome number")
+                s2.innerHTML=`palindrome number`
+            }
+            else{
+                console.log(sum);
+                console.log(" not a palindrome number")
+                s2.innerHTML=`not a palindrome number`
+            }
+         }
+
+         function demo3(){
+            var inp3=document.getElementById("input3").value;
+            let s3=document.querySelector("#s3") ;
+            let temp=inp3;
+            var sum1=0;
+            var rem=0;
+            while(inp3>0){
+                rem=inp3%10;
+                    inp3=parseInt(inp3/10);
+                    sum1=sum1+rem*rem*rem;
+            }
+            if(sum1==temp){
+                console.log(sum1);
+                console.log("armstrong number");
+                s3.innerHTML=`armstrong `;
+            }
+            else{
+                console.log(sum1);
+                console.log(" not armstrong number");
+                s3.innerHTML=` not armstrong `;
+            }
+
+         }
+
+
+    </script>
+</body>
+</html>

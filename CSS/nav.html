@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .navigation-bar{
+            display: block;
+            width:100%;
+            height:128px;
+            background-color:white;
+            position:sticky;
+            top:0px;
+            z-index: 10;
+
+            
+            /* position: fixed; */
+        }
+        #logo{
+            width:150px;
+            height: 150px;
+            padding:30px;
+            float:left;
+            margin-left: 70px;
+            
+            /* height:80px; */
+        }
+        #useressentials ul{
+            text-align: center;
+            display:inline-flex;
+            margin-left: 650px;
+        }
+        #useressentials ul li{
+            font-size:15px;
+            list-style-type: none;
+            padding:15px;
+            cursor:pointer;
+
+            /* display:inline; */
+
+        }
+        #ajioluxe{
+            background-color: black;
+            color:white;
+
+        }
+        #ajiorelatedessentials ul{
+            display: inline-flex;
+            text-align: center;
+            margin-left:100px;
+
+            
+        }
+        #ajiorelatedessentials #ajioessentials ul li{
+            list-style: none;
+            text-align: center;
+            font-size: 20px;
+           
+            padding:15px;
+            float:left;
+            cursor:pointer;
+        }
+        #search-bar {
+            position:relative;
+            margin-top:18px;
+            width:200px;
+            height: 25px;
+            border-radius: 25px;
+            justify-content:center;
+        }
+        #searchbutton{
+            margin-top:4px;
+        }
+  
+        input{
+            text-decoration: none;
+            border: none;
+        }
+        #search-wishlist-addtocartrelated ul {
+            float:left;
+            margin-left: 800px;
+            margin-top: -40px;
+            padding:0px
+        }
+        #search-wishlist-addtocartrelated ul li{
+            margin-top: 35px;
+            padding:10px;
+            list-style-type: none;
+            cursor:pointer;
+        }
+        #add-to-cart,#wish-list{
+            width:60px;
+            height:60px;
+            background-color: black;
+            border-radius:100%;
+            position:relative;
+
+        }
+        .add1 {
+            /* text-align: center; */
+            /* width:0px;
+            height:0px; */
+            color:white;
+            position: absolute;
+            top:20px;
+            left:16px
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        #shopbycategoriesbrands{
+            width:70%;
+            height:500px;
+            background-color: blue;
+            /* display:none; */
+            position:fixed;
+        }
+      
+        
+        /* .child{
+           display: block; 
+           /* position: fixed; */
+        /*} */
+        /* #ajiorelatedessentials #ajioessentials ul li #shopbycategoriesbrands  .child  {
+            /* display:block; */
+            /* position: fixed; */
+          
+            
+        /*} */
+        /* #ajiorelatedessentials #ajioessentials ul li #shopbycategoriesbrands  .child ul{
+            display:block;
+            position: fixed;
+          
+            
+        } */
+       /* .child  {
+            display:block;
+            
+        } */
+        /* #ajiorelatedessentials #ajioessentials   {
+            
+            background-color: aquamarine;
+            color: black;
+            border-radius: 0;
+            
+        } */
+         #header{
+        background-color:coral;
+        display: block;
+        position: fixed;
+        height:800px;
+        width:67%;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       ul li{
+        list-style-type: none;
+        cursor: pointer;
+       }
+       #ajiorelatedessentials #ajioessentials ul li:hover #childnav {
+           
+           display:block;
+          
+       }
+       #ajiorelatedessentials #ajioessentials>ul {
+         /* display:block; */
+           position:fixed;
+           /* display: block; */
+           /* height: 300px;
+           width:200px; */
+            /* display:block;
+            background-color: aqua; 
+            font-size: 30px; */
+       }
+       #childnav{
+            width:800px;
+            height:67%;
+            background-color: aqua;
+            position:fixed;
+            
+            display:none;
+        }
+        #childnav>#header ul {
+            display:block;
+          
+        }
+
+       
+       #subnav1{
+        /* background-color: aqua; */
+        /* background-color: blue; */
+        text-align:center;
+        width:25%;
+        height:700px;
+        position:absolute;
+        margin-top:10px;
+        margin-left:-110px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 700;
+        line-height: 10px;
+        color:black;
+        
+        
+       }
+       #subnav2{
+        /* background-color: aqua; */
+    
+        width:25%;
+        height:700px;
+        background-color: blu;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:200px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 700;
+        line-height: 10px;
+        color:black;
+        text-align: left;
+        /* text-indent: 0px; */
+        /* text-align:end; */
+        
+       }
+       /* #subnav2 ul li{
+        text-align: left;
+       } */
+       #subnav3{
+        background-color: aqu;
+        width:25%;
+        height:800px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:400px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        line-height: 10px;
+        color:black;
+       
+       }
+       #subnav4{
+        background-color: aqu;
+        width:25%;
+        height:800px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:650px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        line-height: 10px;
+        color:black;
+       
+       }
+       .ftr-top{
+        width:100%;
+        height:200px;
+        background-color: aqua;
+       }
+       
+       .ftr-top li i{
+        font-size: 100px;
+        color: pink;
+       }
+       .payment{
+       /* background-color:aqua; */
+       width:40%;
+       height: 60px;
+       color:white; 
+       position: absolute;
+       margin-top: 430px;
+       margin-left: 80px;
+       }
+       .payment ul li{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        padding:10px;
+        display: inline;
+        line-height: 30px;
+        
+        letter-spacing: 1px;
+        font-weight: 1000;
+
+       }
+       #securesystems{
+
+        width:13%;
+        height:70px;
+        /* background-color: aqua; */
+        line-height: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        color:white;
+        position: absolute;
+        margin-left:1200px;
+        margin-top: 430px;
+       }
+      
+
+        /* style="background-color: aquamarin; width: 25%;height: 400px;float: left;" */
+    </style>
+</head>
+<body>
+    <div class="navigation-bar">
+        <hr size="2px " style="border: 3px solid black;">
+        <div id="logo">
+            <img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="">
+        </div>
+        <div id="useressentials">
+            <ul>
+                <li>user</li>
+                <li>My Account</li>
+                <li>Sign Out</li>
+                <li>Customer Care</li>
+                <li id="ajioluxe">Visit AJIOLUXE</li>
+            </ul>
+        </div>
+        <div id="ajiorelatedessentials">
+            <div id="ajioessentials">
+                <ul>
+                    <li>MEN
+                        <div id="childnav">
+                            <div id="header">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li>CLOTHING</li>
+                                    <li>FOOTWEAR</li>
+                                    <li>ACCESORIES</li>
+                                    <li>ALLTHATSNEW</li>
+                                    <li>Clothing</li>
+                                    <li>Footwear</li>
+                                    <li>Accesories</li>
+                                    <li>AJIOGLOBAL</li>
+                                    <li>PLUSSIZE</li>
+                                    <li>NIGHT&LOUNGEWEAR</li>
+                                    <li>GROOMING</li>
+                                    <li>ETHNIC&FESTIVE </li>
+                                    <li>KurtasAndShirts</li>
+                                    <li>NehruJackets</li>
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li>WESTERNWEAR </li>
+                                    <li>TShirts</li>
+                                    <li>FOOTWEAR</li>
+                                    <li>Casual_Shoes</li>
+                                    <li>FlipFlops&Slippers</li>
+                                    <li>FormalShoes</li>
+                                    <li>Sandals</li>
+                                    <li>Sneakers</li>
+                                    <li>Sports_Shoes</li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li>ACCESSORIES</li>
+                                     <li>BackpacksBags&Wallets</li>
+                                     <li>Belts</li>
+                                     <li>Caps&Hats</li>
+                                     <li> Fashion</li>
+                                     <li>Accessories</li>
+                                     <li> Luggage&Trolleys</li>
+                                     <li>Socks</li>
+                                     <li>Sunglasses&Frames</li>
+                                     <li>Watches</li>
+                                     <li>PRECIOUSJEWELLERY</li>
+                                     <li>GoldAndSilver</li>
+                                     <li>CoinsGoldAndDiamond</li>
+                                     <li> JewellerySilver</li>
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>FEATURED</li>
+                                     <li>BagsUnder1499</li>
+                                     <li>FootwearUnder1499</li>
+                                     <li>JeansUnder1199</li>
+                                     <li>Shorts&3/4thsUnder699</li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li>PlayTime</li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>
+                        <!-- <div id="shopbycategoriesbrands">
+                            <span>Shop By:</span>
+                            <ul style="border: 1px solid whitesmoke; background-color: azure; ">
+                                <li >CATEGORIES </li>
+                                <li>BRANDS</li>
+                            </ul>
+                            <div class="child">
+                             <div id="p1">     
+                                 <ul >
+                                
+                                
+                                </ul>
+                             </div>
+                            <div id="p2">      <ul >
+                                <li>nbahdhsbbhCLOTHING</li>
+                                <li>FOOTWEAR</li>
+                                <li>ACCESORIES</li>
+                                <li>ALL THATS NEW</li>
+                                <li>Clothing</li>
+                                <li>Footwear</li>
+                                <li>Accesories</li>
+                                <li>AJIO GLOBAL</li>
+                                <li>PLUS SIZE</li>
+                                <li>NIGHT & LOUNGE WEAR</li>
+                                <li>GROOMING</li>
+                                <li>ETHNIC & FESTIVE </li>
+                                <li>Kurtas And Shirts</li>
+                                <li>Nehru Jackets</li>
+                                
+                            </ul></div>
+                            </div>
+                        </div> -->
+                    </li>
+                    <li>WOMEN</li>
+                    <li>KIDS</li>
+                    <li>INDIE</li>
+                    <li>HOME AND KITCHEN</li>
+                </ul>
+                
+            </div>
+            <div id="search-wishlist-addtocartrelated">
+                <ul>
+                    <li> <div id="search-bar" style="border:3px solid black; " >
+                        <form action="">
+                            <input type="text"  name="" id="" placeholder="Search AJIO">
+                            <i id="searchbutton" class="fa-solid fa-magnifying-glass"></i>
+    
+                        </form>
+                    </div></li>
+                    <li><div id="wish-list"><div class="add1"><i class="fa-solid fa-heart fa-2xl"></i></div></div></li>
+                    <li> <div id="add-to-cart" ><div class="add1"><i class="fa-solid fa-bag-shopping fa-2xl"></i></div></div></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="">
+    <script>
+        let b=document.createElement("button");
+        b.innerHTML="submit";
+        let a=document.createElement("a");
+        a.innerHTML="<h1>Go to  google</h1>";
+        a.href="https://www.google.com"
+        b.addEventListener('click',()=>{
+            document.body.style.backgroundImage=`url(charminar.jpg)`;
+            document.body.style.backgroundSize="2000px 1000px"
+            document.body.style.backgroundRepeat="no-repeat"
+        })
+        document.body.append(b);
+        document.body.append(a);
+    </script>
+</body>
+</html>

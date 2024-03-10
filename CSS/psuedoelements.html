@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ::before{
+            content:'###';
+        } */
+        h1::before{
+            content:'@@@';
+            color:red;
+        }
+
+        p::before{
+            content:'########';
+            color:greenyellow;
+        }
+        h2::selection{
+            background-color: orangered;
+            color:brown;
+        }
+        #inp1::file-selector-button{
+            color:blue;
+
+        }
+        ul li::marker{
+            content:'==>';
+            color: red;
+        }
+        input::placeholder{
+            color:red;
+        }
+        li::marker{
+            content: '*';
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <ul type="star">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>REACT JS</li>
+    </ul>
+    <p>Welcome to psuedo elements</p>
+    <h1>Welcome to css</h1>
+    <input type="text" name="" id="" placeholder="enter name">
+    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia officiis deserunt autem sed porro recusandae quibusdam voluptatem, amet sequi, molestias tempore, ullam omnis ad molestiae nihil consectetur iusto optio possimus eos assumenda cumque totam maiores! Consectetur velit eius laudantium labore cupiditate? Accusantium, libero reprehenderit. Eum officia reprehenderit commodi quas labore.</h2>
+    <input type="file" placeholder="" id="inp1">
+
+</body>
+</html>

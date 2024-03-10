@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajio-Online Shopping website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .navigation-bar{
+            display: block;
+            width:100%;
+            height:128px;
+            background-color:white;
+            position:sticky;
+            top:0px;
+            z-index: 10;
+
+            
+            /* position: fixed; */
+        }
+        #logo{
+            width:150px;
+            height: 150px;
+            padding:30px;
+            float:left;
+            margin-left: 70px;
+            
+            /* height:80px; */
+        }
+        #useressentials ul{
+            text-align: center;
+            display:inline-flex;
+            margin-left: 630px;
+        }
+        #useressentials ul li{
+            font-size:15px;
+            list-style-type: none;
+            padding:15px;
+            cursor:pointer;
+
+            /* display:inline; */
+
+        }
+        #ajioluxe{
+            background-color: black;
+            color:white;
+
+        }
+        #ajiorelatedessentials ul{
+            display: inline-flex;
+            text-align: center;
+            margin-left:100px;
+            margin-top: 10px;
+
+            
+        }
+        #ajiorelatedessentials #ajioessentials ul li{
+            list-style: none;
+            text-align: center;
+            font-size: 20px;
+           
+            padding:15px;
+            float:left;
+            cursor:pointer;
+        }
+        #search-bar {
+            position:relative;
+            margin-top:18px;
+            width:200px;
+            height: 25px;
+            border-radius: 25px;
+            justify-content:center;
+        }
+        #searchbutton{
+            margin-top:4px;
+        }
+  
+        input{
+            text-decoration: none;
+            border: none;
+        }
+        #search-wishlist-addtocartrelated ul {
+            float:left;
+            margin-left: 790px;
+            margin-top: 12px;
+            padding:0px
+        }
+        #search-wishlist-addtocartrelated ul li{
+            margin-top: -18px;
+            padding:10px;
+            list-style-type: none;
+            cursor:pointer;
+        }
+        #add-to-cart,#wish-list{
+            width:60px;
+            height:60px;
+            background-color: black;
+            border-radius:100%;
+            position:relative;
+
+        }
+        .add1 {
+            /* text-align: center; */
+            /* width:0px;
+            height:0px; */
+            color:white;
+            position: absolute;
+            top:20px;
+            left:16px
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        /* #shopbycategoriesbrands{
+            display:none;
+            position:fixed;
+        }
+        #ajiorelatedessentials #ajioessentials ul li:hover #shopbycategoriesbrands{
+           
+            display:block;
+           
+        } */
+        /* #ajiorelatedessentials #ajioessentials ul li #shopbycategoriesbrands ul  {
+          
+            position:fixed;
+            display: block;
+            /* height: 300px;
+            width:200px; */
+             /* display:block;
+             background-color: aqua; 
+             font-size: 30px; */
+       /* } */
+        .child{
+            /* width:70%;
+            height:500px;
+            background-color: chartreuse; */
+           display: none; 
+           position: fixed;
+        }
+        /* #ajiorelatedessentials #ajioessentials ul li #shopbycategoriesbrands  .child  {
+            display:block;
+            /* position: fixed; */
+          
+            
+        /*} */
+        /* #ajiorelatedessentials #ajioessentials ul li #shopbycategoriesbrands  .child ul{
+            display:block;
+            position: fixed;
+          
+            
+        } */
+       /* .child  {
+            display:block;
+            
+        } */
+        /* #p1{
+            width:1000%;
+            height:500px;
+            background-color: aqua;
+        } */
+        #ajiorelatedessentials #ajioessentials ul li:hover .child   {
+            display:block;
+            /* flex-wrap: wrap;
+            background-color: aquamarine;
+            color: black;
+            border-radius: 0; */
+
+            
+        }
+        #ajiorelatedessentials #ajioessentials ul li:hover .child  ul {
+            display:block;
+            /* flex-wrap: wrap; */
+            background-color: aquamarine;
+            color: black;
+            border-radius: 0;
+
+            
+        }
+          #header1{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:500px;
+        width:79%;
+        margin-left: -146px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       #header2{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:500px;
+        width:79%;
+        margin-left: -220px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       #header3{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:500px;
+        width:79%;
+        margin-left: -334px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       #header4{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:500px;
+        width:79%;
+        margin-left: -412px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       #header5{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:500px;
+        width:79%;
+        margin-left: -497px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+       ul li{
+        list-style-type: none;
+        cursor: pointer;
+       }
+       #ajiorelatedessentials #ajioessentials ul li:hover{
+        font-weight: 650;
+       }
+       #ajiorelatedessentials #ajioessentials ul li:hover #childnav  {
+           
+           
+           display:block;
+           /* position:relative;
+           margin-left: 30px;
+           */
+       }
+       #ajiorelatedessentials #ajioessentials>ul {
+         /* display:block; */
+           position:fixed;
+           /* display: block; */
+           /* height: 300px;
+           width:200px; */
+            /* display:block;
+            background-color: aqua; 
+            font-size: 30px; */
+       }
+       #childnav{
+            width:67%;
+            height:500px;
+            background-color: aqu;
+            position:fixed;
+            
+            display:none;
+        }
+        #childnav>#header1 ul,#childnav>#header2 ul,#childnav>#header3 ul,#childnav>#header4 ul,#childnav>#header5 ul{
+            display:block;
+          
+        }
+      
+
+       
+       #subnav1{
+        /* background-color: aqua; */
+        /* background-color: blue; */
+        text-align:center;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top:10px;
+        margin-left:-30px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 500;
+        line-height: 10px;
+        color:black;
+        
+        
+       }
+       #subnav2{
+        /* background-color: aqua; */
+    
+        width:25%;
+        height:600px;
+        background-color: blu;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:250px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 500;
+        line-height: 10px;
+        color:black;
+        text-align: left;
+        /* text-indent: 0px; */
+        /* text-align:end; */
+        
+       }
+       /* #subnav2 ul li{
+        text-align: left;
+       } */
+       #subnav3{
+        background-color: aqu;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:530px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        line-height: 10px;
+        color:black;
+       
+       }
+       #subnav4{
+        background-color: aqu;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:810px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        line-height: 10px;
+        color:black;
+       
+       }
+
+        /* #ajiorelatedessentials #ajioessentials ul li:hover #shopbycategoriesbrands .child #p1 ul li {
+            display: inline-flex;
+            /* text-align: start; */
+            /* justify-content: center; */
+       /* } */
+        #hurryupanimation{
+         width:100%;
+         height: 135px;
+         background-color: chartreuse;
+         position: relative;
+         margin-top: 0px;
+         
+         /* position: relative; */
+            
+            transition: all 2s;
+        }
+        #hurryupanimation #img{
+            /* overflow-x:hidden; */
+        position: absolute;
+        /* margin:auto;
+        margin-inline-start: 0%; */
+        padding-top:0px;
+        margin-left:-280px;
+        width:100%; 
+        /* height:100%; */
+        /* margin-top:0px;
+        margin-left:0px;
+        margin-right: 50px; */
+        /* display: block; */
+            
+           
+        } 
+
+        #hurryupanimation:hover{
+            scale:1.02;
+        }
+        #offers,#tophits{
+            width:1520px;
+            height:450px;
+            background-color: darksalmon;
+        }
+       
+        /* #offers{
+            width: 1520px;;
+            height: 450px;
+        } */
+        .auto-slider img{
+            display:block;
+            width: 1520px;
+            height: 450px;
+            transition: all 2s;
+        }
+      
+        .auto-slider{
+            /* border:10px solid red; */
+            width:100%;
+            /* height:450px; */
+            overflow: hidden;
+            cursor:pointer;
+            
+            
+        }
+        .auto-slider-content{
+            list-style: none;
+            display: flex;
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+
+            /* transform:translateX(-1010px); */
+        }
+        .auto-slider-content:hover{
+            animation-play-state:paused;
+            
+          
+        }
+        .auto-slider img:hover{
+            scale: 1.03;
+            /* width: 1540px;;
+            height: 450px; */
+        }
+        @keyframes slide {
+            10%,25% {
+            transform: translateX(0px);
+            }
+            30%,55% {
+            transform: translateX(-100%);
+            }
+            60%,100%{
+            transform: translateX(-200%);
+            }
+            
+        }
+
+        #bankoffers,#referals {
+           
+            width:100%;
+            height:150px;
+            overflow: hidden;
+            cursor:pointer;
+            background-color: aqua;
+           
+            
+            
+        }
+        #bankoffers  img ,#referals img{
+           display: block;
+           width:1520px;
+           height:150px;
+          
+          
+           
+           
+       }
+       #brands{
+        background-color:aqua;
+        width:100%;
+        height:460px;
+        overflow:hidden
+       }
+       .brand {
+       justify-content: center;
+       /* margin-left:5px; */
+       width:25%;
+       height:434px;
+       float:left;
+       transition: all 2s;
+       }
+       .brand img {
+      
+       /* margin-left:5px; */
+       width:100%;
+      
+       }
+       .brand:hover {
+       scale: 1.06;
+       /* overflow: hidden; */
+       }
+      
+       #bestsellers,#trendingnow{
+        width:100%;
+        height:405px;
+        background-color: orangered;
+        overflow:hidden;
+       }
+       #bestsellers img,#trendingnow img{
+        width:33.1%;
+        height:400px;
+        transition:all 2s;
+        
+       }
+       #todayfav,#unmissdeal{
+        width:100%;
+        height:455px;
+        background-color: aqua;
+       }
+       #bestsellers img:hover,#trendingnow img:hover{
+       scale:1.02;
+        
+       }
+       #diffstyles{
+        width:100%;
+        height:468px;
+        background-color: aquamarine;
+        overflow:hidden;
+       }
+       #diffstyles img{
+       width:24.8%;
+       transition:all 3s;
+       }
+       #diffstyles img:hover{
+       scale:1.03;
+       }
+       #discovernew{
+        width:100%;
+        height:470px;
+        background-color: black;
+        overflow:hidden;
+
+
+       }
+       #discovernew img{
+        width:100%;
+        transition: all 3s;
+       }
+       #discovernew img:hover{
+        scale:1.02;
+       }
+       #allstarsale{
+        background-color: aqua;
+        transition:all 3s
+       }
+       #allstarsale img{
+        width:100%;
+        transition:all 3s
+       }
+       #allstarsale img:hover{
+        scale:1.02
+       }
+
+       #footer{
+        background-color: black;
+        
+        height:550px;
+        width:100%;
+        position:relative;
+        
+       }
+       ul li{
+        list-style-type: none;
+        cursor: pointer;
+       }
+       #ajioqueries{
+        /* background-color: aqua; */
+        width:20%;
+        height:300px;
+        position:absolute;
+        margin:80px ;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        line-height: 25px;
+        color:white;
+        
+        
+       }
+       #helpqueries{
+        /* background-color: aqua; */
+        width:20%;
+        height:300px;
+        position:absolute;
+        margin-top: 82px;
+        margin-left:420px ;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        line-height: 25px;
+        color:white;
+        
+       }
+       #shopbyqueries{
+        /* background-color: aqua; */
+        width:20%;
+        height:300px;
+        position:absolute;
+        margin-top: 82px;
+        margin-left:750px ;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        line-height: 25px;
+        color:white;
+       
+       }
+       #followusqueries{
+        /* background-color: aqua; */
+        width:20%;
+        height:300px;
+        position:absolute;
+        margin-top: 82px;
+        margin-left:1080px ;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        line-height: 25px;
+        color:white;
+       
+       }
+       .ftr-top{
+        width:100%;
+        height:200px;
+        background-color: aqua;
+       }
+       
+       .ftr-top li i{
+        font-size: 100px;
+        color: pink;
+       }
+       .payment{
+       /* background-color:aqua; */
+       width:40%;
+       height: 60px;
+       color:white; 
+       position: absolute;
+       margin-top: 430px;
+       margin-left: 80px;
+       }
+       .payment ul li{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        padding:10px;
+        display: inline;
+        line-height: 30px;
+        
+        letter-spacing: 1px;
+        font-weight: 1000;
+
+       }
+       #securesystems{
+
+        width:13%;
+        height:70px;
+        /* background-color: aqua; */
+        line-height: 30px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 15px;
+        color:white;
+        position: absolute;
+        margin-left:1200px;
+        margin-top: 430px;
+       }
+       #hr1{ 
+            height: 3px; 
+            background-color:white; 
+            border: none; 
+            width:88%;
+            position: absolute;
+        margin-left:78px;
+        margin-top: 400px;
+            
+        } 
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        .u:hover{
+            text-decoration: underline;
+            
+        }
+        .w{
+            color:white;
+        }
+        .w:hover{
+            text-decoration: underline;
+            /* color:white; */
+        }
+        
+
+
+
+       
+
+    
+    
+       /* hr{
+        border-style: white;
+        color: white;
+       } */
+       /* style="background-color: aquamarin; width: 25%;height: 400px;float: left;" */
+    </style>
+</head>
+<body>
+    <div class="navigation-bar">
+        <hr size="2px " style="border: 3px solid black;">
+        <div id="logo">
+            <img src="https://assets.ajio.com/static/img/Ajio-Logo.svg" alt="">
+        </div>
+        <div id="useressentials">
+            <ul>
+                <li>Yashwanth</li>
+               
+                <li> <a class="u" href="https://www.ajio.com/my-account/orders">My Account</a></li>
+                <li><a class="u" href="https://www.ajio.com">Sign Out</a></li>
+                
+                <li><a class="u" href="https://www.ajio.com/selfcare">Customer Care</a></li>
+                
+                <li id="ajioluxe"><a class="u" style="color: white;" href="https://luxe.ajio.com/?_ga=2.104378756.521477513.1697386069-1598381029.1690093138&amp;_gac=1.181996373.1696224395.CjwKCAjwseSoBhBXEiwA9iZtxgikFBTS3vuWXCfJS6xWfAamv-QoAP4_Fo_BH7K3ONPpgKdoQJpU0BoCGrsQAvD_BwE">Visit AJIOLUXE</a></li>
+            </ul>
+        </div>
+        <div id="ajiorelatedessentials">
+            <div id="ajioessentials">
+                <ul>
+                    <li> <a href="https://www.ajio.com/s/flat-70-percent-off-5214-38191">MEN</a>
+                        <div id="childnav">
+                            <div id="header1">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">CLOTHING </a></li>
+                                    <li> <a href="https://www.ajio.com/s/footwear-4792-56591">FOOTWEAR</a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">ACCESORIES </a></li>
+                                    <li><a href="https://www.ajio.com/s/latest-collections-4461-74581">ALLTHATSNEW </a></li>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">Clothing </a></li>
+                                    <li><a href="https://www.ajio.com/s/footwear-4792-56591">Footwear </a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">Accesories </a></li>
+                                    <li><a href="https://www.ajio.com/shop/international-brands">AJIOGLOBAL </a></li>
+                                    <li> <a href="https://www.ajio.com/s/plus-size-5061-69371">PLUSSIZE</a></li>
+                                    <li><a href="https://www.ajio.com/men-night-lounge-wear/c/830212">NIGHT&LOUNGEWEAR </a></li>
+                                   
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li> <a href="https://www.ajio.com/men-western-wear/c/830216">WESTERNWEAR</a></li>
+                                    <li> <a href="https://www.ajio.com/men-tshirts/c/830216014">TShirts</a></li>
+                                    <li><a href="https://www.ajio.com/men-footwear/c/830207">FOOTWEAR </a></li>
+                                    <li> <a href="https://www.ajio.com/men-casual-shoes/c/830207006">Casual_Shoes</a></li>
+                                    <li> <a href="https://www.ajio.com/men-flip-flop-slippers/c/830207001">FlipFlops&Slippers</a></li>
+                                    <li> <a href="https://www.ajio.com/men-formal-shoes/c/830207007">FormalShoes</a></li>
+                                    <li> <a href="https://www.ajio.com/s/sandals-5149-55061">Sandals</a></li>
+                                    <li><a href="https://www.ajio.com/men-sneakers/c/830207010">Sneakers </a></li>
+                                    <li><a href="https://www.ajio.com/men-sports-shoes/c/830207008">Sports_Shoes </a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li> <a href="https://www.ajio.com/s/men-accessories-brands">ACCESSORIES</a></li>
+                                     <li><a href="https://www.ajio.com/men-backpacks/c/830201001">BackpacksBags&Wallets </a></li>
+                                     <li> <a href="https://www.ajio.com/men-belts/c/830201007">Belts</a></li>
+                                     <li> <a href="https://www.ajio.com/men-caps-hats/c/830202001">Caps&Hats</a></li>
+                                     <li>  <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Fashion</a></li>
+                                     <li> <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Accessories</a></li>
+                                     <li>  <a href="https://www.ajio.com/s/luggage-and-trolleys-4875-38751">Luggage&Trolleys</a></li>
+                                     <li><a href="https://www.ajio.com/men-socks/c/830202002">Socks </a></li>
+                                     <li> <a href="https://www.ajio.com/s/mhp-sunglasses-and-frames-4119-33682">Sunglasses&Frames</a></li>
+                                     <li> <a href="https://www.ajio.com/s/men-watches-3991-40341">Watches</a></li>
+                                     <li> <a href="https://www.ajio.com/s/precious-jewellery-4119-63402">PRECIOUSJEWELLERY</a></li>
+                                     
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>#FEATURED </li>
+                                     <li> <a href="https://www.ajio.com/s/eoss-men-impulse-steal-bags">BagsUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/mens-footwear-under-1499">FootwearUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/jeans-under-1299-5148-69861">JeansUnder1199</a></li>
+                                     <li> <a href="https://www.ajio.com/s/shorts-three-fourths-under-699">Shorts&3/4thsUnder699</a></li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li><a href="https://www.ajio.com/s/play-time-3544-62961">PlayTime </a></li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>
+                        <!-- <div id="shopbycategoriesbrands"> -->
+                            <!-- <span>Shop By:</span>
+                            <ul style="border: 1px solid whitesmoke; background-color: azure; ">
+                                <li >CATEGORIES </li>
+                                <li>BRANDS</li>
+                            </ul> -->
+                            <!-- <div class="child"> -->
+                             <!-- <div id="p1">      -->
+                                 <!-- <ul >
+                                <li>CLOTHING</li>
+                                <li>FOOTWEAR</li>
+                                <li>ACCESORIES</li>
+                                <li>ALL THATS NEW</li>
+                                <li>Clothing</li>
+                                <li>Footwear</li>
+                                <li>Accesories</li>
+                                <li>AJIO GLOBAL</li>
+                                <li>PLUS SIZE</li>
+                                <li>NIGHT & LOUNGE WEAR</li>
+                                <li>GROOMING</li>
+                                <li>ETHNIC & FESTIVE </li>
+                                <li>Kurtas And Shirts</li>
+                                <li>Nehru Jackets</li>
+                            </ul> -->
+                            <!-- </div> -->
+                            <!-- <div id="p2">      <ul >
+                                <li>nbahdhsbbhCLOTHING</li>
+                                <li>FOOTWEAR</li>
+                                <li>ACCESORIES</li>
+                                <li>ALL THATS NEW</li>
+                                <li>Clothing</li>
+                                <li>Footwear</li>
+                                <li>Accesories</li>
+                                <li>AJIO GLOBAL</li>
+                                <li>PLUS SIZE</li>
+                                <li>NIGHT & LOUNGE WEAR</li>
+                                <li>GROOMING</li>
+                                <li>ETHNIC & FESTIVE </li>
+                                <li>Kurtas And Shirts</li>
+                                <li>Nehru Jackets</li>
+                                
+                            </ul></div> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    </li>
+                    <li> <a href="https://www.ajio.com/s/upto-80-percent-off-5214-46942">WOMEN</a>
+                        <div id="childnav">
+                            <div id="header2">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">CLOTHING </a></li>
+                                    <li> <a href="https://www.ajio.com/s/footwear-4792-56591">FOOTWEAR</a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">ACCESORIES </a></li>
+                                    <li><a href="https://www.ajio.com/s/latest-collections-4461-74581">ALLTHATSNEW </a></li>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">Clothing </a></li>
+                                    <li><a href="https://www.ajio.com/s/footwear-4792-56591">Footwear </a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">Accesories </a></li>
+                                    <li><a href="https://www.ajio.com/shop/international-brands">AJIOGLOBAL </a></li>
+                                    <li> <a href="https://www.ajio.com/s/plus-size-5061-69371">PLUSSIZE</a></li>
+                                    <li><a href="https://www.ajio.com/men-night-lounge-wear/c/830212">NIGHT&LOUNGEWEAR </a></li>
+                                   
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li> <a href="https://www.ajio.com/men-western-wear/c/830216">WESTERNWEAR</a></li>
+                                    <li> <a href="https://www.ajio.com/men-tshirts/c/830216014">TShirts</a></li>
+                                    <li><a href="https://www.ajio.com/men-footwear/c/830207">FOOTWEAR </a></li>
+                                    <li> <a href="https://www.ajio.com/men-casual-shoes/c/830207006">Casual_Shoes</a></li>
+                                    <li> <a href="https://www.ajio.com/men-flip-flop-slippers/c/830207001">FlipFlops&Slippers</a></li>
+                                    <li> <a href="https://www.ajio.com/men-formal-shoes/c/830207007">FormalShoes</a></li>
+                                    <li> <a href="https://www.ajio.com/s/sandals-5149-55061">Sandals</a></li>
+                                    <li><a href="https://www.ajio.com/men-sneakers/c/830207010">Sneakers </a></li>
+                                    <li><a href="https://www.ajio.com/men-sports-shoes/c/830207008">Sports_Shoes </a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li> <a href="https://www.ajio.com/s/men-accessories-brands">ACCESSORIES</a></li>
+                                     <li><a href="https://www.ajio.com/men-backpacks/c/830201001">BackpacksBags&Wallets </a></li>
+                                     <li> <a href="https://www.ajio.com/men-belts/c/830201007">Belts</a></li>
+                                     <li> <a href="https://www.ajio.com/men-caps-hats/c/830202001">Caps&Hats</a></li>
+                                     <li>  <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Fashion</a></li>
+                                     <li> <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Accessories</a></li>
+                                     <li>  <a href="https://www.ajio.com/s/luggage-and-trolleys-4875-38751">Luggage&Trolleys</a></li>
+                                     <li><a href="https://www.ajio.com/men-socks/c/830202002">Socks </a></li>
+                                     <li> <a href="https://www.ajio.com/s/mhp-sunglasses-and-frames-4119-33682">Sunglasses&Frames</a></li>
+                                     <li> <a href="https://www.ajio.com/s/men-watches-3991-40341">Watches</a></li>
+                                     <li> <a href="https://www.ajio.com/s/precious-jewellery-4119-63402">PRECIOUSJEWELLERY</a></li>
+                                     
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>#FEATURED </li>
+                                     <li> <a href="https://www.ajio.com/s/eoss-men-impulse-steal-bags">BagsUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/mens-footwear-under-1499">FootwearUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/jeans-under-1299-5148-69861">JeansUnder1199</a></li>
+                                     <li> <a href="https://www.ajio.com/s/shorts-three-fourths-under-699">Shorts&3/4thsUnder699</a></li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li><a href="https://www.ajio.com/s/play-time-3544-62961">PlayTime </a></li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>
+                    </li>
+                    <li><a href="https://www.ajio.com/s/khp-starting-at-rs-129-5212-63401">KIDS </a>
+                        <div id="childnav">
+                            <div id="header3">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">CLOTHING </a></li>
+                                    <li> <a href="https://www.ajio.com/s/footwear-4792-56591">FOOTWEAR</a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">ACCESORIES </a></li>
+                                    <li><a href="https://www.ajio.com/s/latest-collections-4461-74581">ALLTHATSNEW </a></li>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">Clothing </a></li>
+                                    <li><a href="https://www.ajio.com/s/footwear-4792-56591">Footwear </a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">Accesories </a></li>
+                                    <li><a href="https://www.ajio.com/shop/international-brands">AJIOGLOBAL </a></li>
+                                    <li> <a href="https://www.ajio.com/s/plus-size-5061-69371">PLUSSIZE</a></li>
+                                    <li><a href="https://www.ajio.com/men-night-lounge-wear/c/830212">NIGHT&LOUNGEWEAR </a></li>
+                                   
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li> <a href="https://www.ajio.com/men-western-wear/c/830216">WESTERNWEAR</a></li>
+                                    <li> <a href="https://www.ajio.com/men-tshirts/c/830216014">TShirts</a></li>
+                                    <li><a href="https://www.ajio.com/men-footwear/c/830207">FOOTWEAR </a></li>
+                                    <li> <a href="https://www.ajio.com/men-casual-shoes/c/830207006">Casual_Shoes</a></li>
+                                    <li> <a href="https://www.ajio.com/men-flip-flop-slippers/c/830207001">FlipFlops&Slippers</a></li>
+                                    <li> <a href="https://www.ajio.com/men-formal-shoes/c/830207007">FormalShoes</a></li>
+                                    <li> <a href="https://www.ajio.com/s/sandals-5149-55061">Sandals</a></li>
+                                    <li><a href="https://www.ajio.com/men-sneakers/c/830207010">Sneakers </a></li>
+                                    <li><a href="https://www.ajio.com/men-sports-shoes/c/830207008">Sports_Shoes </a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li> <a href="https://www.ajio.com/s/men-accessories-brands">ACCESSORIES</a></li>
+                                     <li><a href="https://www.ajio.com/men-backpacks/c/830201001">BackpacksBags&Wallets </a></li>
+                                     <li> <a href="https://www.ajio.com/men-belts/c/830201007">Belts</a></li>
+                                     <li> <a href="https://www.ajio.com/men-caps-hats/c/830202001">Caps&Hats</a></li>
+                                     <li>  <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Fashion</a></li>
+                                     <li> <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Accessories</a></li>
+                                     <li>  <a href="https://www.ajio.com/s/luggage-and-trolleys-4875-38751">Luggage&Trolleys</a></li>
+                                     <li><a href="https://www.ajio.com/men-socks/c/830202002">Socks </a></li>
+                                     <li> <a href="https://www.ajio.com/s/mhp-sunglasses-and-frames-4119-33682">Sunglasses&Frames</a></li>
+                                     <li> <a href="https://www.ajio.com/s/men-watches-3991-40341">Watches</a></li>
+                                     <li> <a href="https://www.ajio.com/s/precious-jewellery-4119-63402">PRECIOUSJEWELLERY</a></li>
+                                     
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>#FEATURED </li>
+                                     <li> <a href="https://www.ajio.com/s/eoss-men-impulse-steal-bags">BagsUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/mens-footwear-under-1499">FootwearUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/jeans-under-1299-5148-69861">JeansUnder1199</a></li>
+                                     <li> <a href="https://www.ajio.com/s/shorts-three-fourths-under-699">Shorts&3/4thsUnder699</a></li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li><a href="https://www.ajio.com/s/play-time-3544-62961">PlayTime </a></li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>
+                    </li>
+                    <li> <a href="https://www.ajio.com/s/the-chennai-silk-5083-76251">INDIE</a>
+                        <div id="childnav">
+                            <div id="header4">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">CLOTHING </a></li>
+                                    <li> <a href="https://www.ajio.com/s/footwear-4792-56591">FOOTWEAR</a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">ACCESORIES </a></li>
+                                    <li><a href="https://www.ajio.com/s/latest-collections-4461-74581">ALLTHATSNEW </a></li>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">Clothing </a></li>
+                                    <li><a href="https://www.ajio.com/s/footwear-4792-56591">Footwear </a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">Accesories </a></li>
+                                    <li><a href="https://www.ajio.com/shop/international-brands">AJIOGLOBAL </a></li>
+                                    <li> <a href="https://www.ajio.com/s/plus-size-5061-69371">PLUSSIZE</a></li>
+                                    <li><a href="https://www.ajio.com/men-night-lounge-wear/c/830212">NIGHT&LOUNGEWEAR </a></li>
+                                   
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li> <a href="https://www.ajio.com/men-western-wear/c/830216">WESTERNWEAR</a></li>
+                                    <li> <a href="https://www.ajio.com/men-tshirts/c/830216014">TShirts</a></li>
+                                    <li><a href="https://www.ajio.com/men-footwear/c/830207">FOOTWEAR </a></li>
+                                    <li> <a href="https://www.ajio.com/men-casual-shoes/c/830207006">Casual_Shoes</a></li>
+                                    <li> <a href="https://www.ajio.com/men-flip-flop-slippers/c/830207001">FlipFlops&Slippers</a></li>
+                                    <li> <a href="https://www.ajio.com/men-formal-shoes/c/830207007">FormalShoes</a></li>
+                                    <li> <a href="https://www.ajio.com/s/sandals-5149-55061">Sandals</a></li>
+                                    <li><a href="https://www.ajio.com/men-sneakers/c/830207010">Sneakers </a></li>
+                                    <li><a href="https://www.ajio.com/men-sports-shoes/c/830207008">Sports_Shoes </a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li> <a href="https://www.ajio.com/s/men-accessories-brands">ACCESSORIES</a></li>
+                                     <li><a href="https://www.ajio.com/men-backpacks/c/830201001">BackpacksBags&Wallets </a></li>
+                                     <li> <a href="https://www.ajio.com/men-belts/c/830201007">Belts</a></li>
+                                     <li> <a href="https://www.ajio.com/men-caps-hats/c/830202001">Caps&Hats</a></li>
+                                     <li>  <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Fashion</a></li>
+                                     <li> <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Accessories</a></li>
+                                     <li>  <a href="https://www.ajio.com/s/luggage-and-trolleys-4875-38751">Luggage&Trolleys</a></li>
+                                     <li><a href="https://www.ajio.com/men-socks/c/830202002">Socks </a></li>
+                                     <li> <a href="https://www.ajio.com/s/mhp-sunglasses-and-frames-4119-33682">Sunglasses&Frames</a></li>
+                                     <li> <a href="https://www.ajio.com/s/men-watches-3991-40341">Watches</a></li>
+                                     <li> <a href="https://www.ajio.com/s/precious-jewellery-4119-63402">PRECIOUSJEWELLERY</a></li>
+                                     
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>#FEATURED </li>
+                                     <li> <a href="https://www.ajio.com/s/eoss-men-impulse-steal-bags">BagsUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/mens-footwear-under-1499">FootwearUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/jeans-under-1299-5148-69861">JeansUnder1199</a></li>
+                                     <li> <a href="https://www.ajio.com/s/shorts-three-fourths-under-699">Shorts&3/4thsUnder699</a></li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li><a href="https://www.ajio.com/s/play-time-3544-62961">PlayTime </a></li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>
+                    </li>
+                    <li> <a href="https://www.ajio.com/c/8312">HOME AND KITCHEN</a>
+                        <div id="childnav">
+                            <div id="header5">
+                                <div id="subnav1">
+                                 <ul>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">CLOTHING </a></li>
+                                    <li> <a href="https://www.ajio.com/s/footwear-4792-56591">FOOTWEAR</a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">ACCESORIES </a></li>
+                                    <li><a href="https://www.ajio.com/s/latest-collections-4461-74581">ALLTHATSNEW </a></li>
+                                    <li><a href="https://www.ajio.com/s/clothing-4461-74582">Clothing </a></li>
+                                    <li><a href="https://www.ajio.com/s/footwear-4792-56591">Footwear </a></li>
+                                    <li><a href="https://www.ajio.com/s/accessories-4792-56591">Accesories </a></li>
+                                    <li><a href="https://www.ajio.com/shop/international-brands">AJIOGLOBAL </a></li>
+                                    <li> <a href="https://www.ajio.com/s/plus-size-5061-69371">PLUSSIZE</a></li>
+                                    <li><a href="https://www.ajio.com/men-night-lounge-wear/c/830212">NIGHT&LOUNGEWEAR </a></li>
+                                   
+                                      
+                                        
+                                 </ul>
+                                </div>
+                                <div id="subnav2">
+                                  <ul>
+
+                                    <li> <a href="https://www.ajio.com/men-western-wear/c/830216">WESTERNWEAR</a></li>
+                                    <li> <a href="https://www.ajio.com/men-tshirts/c/830216014">TShirts</a></li>
+                                    <li><a href="https://www.ajio.com/men-footwear/c/830207">FOOTWEAR </a></li>
+                                    <li> <a href="https://www.ajio.com/men-casual-shoes/c/830207006">Casual_Shoes</a></li>
+                                    <li> <a href="https://www.ajio.com/men-flip-flop-slippers/c/830207001">FlipFlops&Slippers</a></li>
+                                    <li> <a href="https://www.ajio.com/men-formal-shoes/c/830207007">FormalShoes</a></li>
+                                    <li> <a href="https://www.ajio.com/s/sandals-5149-55061">Sandals</a></li>
+                                    <li><a href="https://www.ajio.com/men-sneakers/c/830207010">Sneakers </a></li>
+                                    <li><a href="https://www.ajio.com/men-sports-shoes/c/830207008">Sports_Shoes </a></li>
+                                    
+                                  </ul>
+                                </div>
+                                <div id="subnav3">
+                                 <ul>
+                                    
+                                     <li> <a href="https://www.ajio.com/s/men-accessories-brands">ACCESSORIES</a></li>
+                                     <li><a href="https://www.ajio.com/men-backpacks/c/830201001">BackpacksBags&Wallets </a></li>
+                                     <li> <a href="https://www.ajio.com/men-belts/c/830201007">Belts</a></li>
+                                     <li> <a href="https://www.ajio.com/men-caps-hats/c/830202001">Caps&Hats</a></li>
+                                     <li>  <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Fashion</a></li>
+                                     <li> <a href="https://www.ajio.com/men-fashion-jewellery/c/830205">Accessories</a></li>
+                                     <li>  <a href="https://www.ajio.com/s/luggage-and-trolleys-4875-38751">Luggage&Trolleys</a></li>
+                                     <li><a href="https://www.ajio.com/men-socks/c/830202002">Socks </a></li>
+                                     <li> <a href="https://www.ajio.com/s/mhp-sunglasses-and-frames-4119-33682">Sunglasses&Frames</a></li>
+                                     <li> <a href="https://www.ajio.com/s/men-watches-3991-40341">Watches</a></li>
+                                     <li> <a href="https://www.ajio.com/s/precious-jewellery-4119-63402">PRECIOUSJEWELLERY</a></li>
+                                     
+                                 </ul>
+                                </div>
+                                <div id="subnav4">
+                                 <ul>
+                                     <li>#FEATURED </li>
+                                     <li> <a href="https://www.ajio.com/s/eoss-men-impulse-steal-bags">BagsUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/mens-footwear-under-1499">FootwearUnder1499</a></li>
+                                     <li> <a href="https://www.ajio.com/s/jeans-under-1299-5148-69861">JeansUnder1199</a></li>
+                                     <li> <a href="https://www.ajio.com/s/shorts-three-fourths-under-699">Shorts&3/4thsUnder699</a></li>
+                                     <li> #AJIORECOMMENDS</li>
+                                     <li><a href="https://www.ajio.com/s/play-time-3544-62961">PlayTime </a></li>
+                                     
+                                 </ul>
+                         
+                         
+                                </div>
+                                <!-- <hr  style="border:20px solid white; color:white"> -->
+                                
+                                
+                             </div>
+                           
+                        </div>                    </li>
+                </ul>
+            </div>
+            <div id="search-wishlist-addtocartrelated">
+                <ul>
+                    <li> <div id="search-bar" style="border:3px solid black; " >
+                        <form action="">
+                            <input type="text"  name="" id="" placeholder="Search AJIO">
+                            <i id="searchbutton" class="fa-solid fa-magnifying-glass"></i>
+    
+                        </form>
+                    </div></li>
+                    <li><div id="wish-list"><div class="add1"> <a style="color: white;" href="https://www.ajio.com/cart"><i class="fa-solid fa-heart fa-2xl"></i></a></div></div></li>
+                    <li> <div id="add-to-cart" ><div class="add1"><a style="color: white;" href="https://www.ajio.com/cart"><i class="fa-solid fa-bag-shopping fa-2xl"></i></a></div></div></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div id="hurryupanimation">
+        <img id="img"src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-MainBanner-Strip-5090.gif"    alt="">
+        <!-- style="width: 100%" -->
+    </div>
+    <div id="offers">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                <li><img src="	https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-MainBanner-Aditi-5090.gif" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06102023-MainBannerDailyChanging-Z1-P2-avaasadnmx-min60 (1).jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06102023-MainBannerDailyChanging-Z1-P3-mnsgant-upto50.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06102023-MainBannerDailyChanging-Z1-P4-ivocgilto-flat40.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06102023-MainBannerDailyChanging-Z1-P5-louisphilippeVanheusen-min40.jpg"alt=""></li>
+    
+            </ul>
+        </div>
+    </div>
+    <div id="bankoffers">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/IDFC-1440x128-1.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/Fi Credit Cards-1440x128.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/Paytm-1440x128 2.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03102023-AllianceStripsStatic-Z1-payupto1.jpg" alt=""></li>
+    
+            </ul>
+        </div>
+    </div>
+    <div id="todaytophits">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-TodaysTopHits-Sectionheader.jpg" alt="" style="width: 100%;">
+    </div>
+    <div id="tophits">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-10102023-TopBrandBanner-Z3-P2-Nikeskechers-min30.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-10102023-TopBrandBanner-Z3-P1-Intbrands-min50.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-10102023-TopBrandBanner-Z3-P3-SilverflyHubberholme-flat40.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-10102023-TopBrandBanner-Z3-P4-acaibudajeans-min50.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-10102023-TopBrandBanner-Z3-P5-gantgap-upto50.jpg"alt=""></li>
+    
+            </ul>
+        </div>
+    </div>
+    <div id="referals">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                
+                <li> <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03102023-AllianceStripsStatic-Z1-ShopEarn2.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-WalletOffer-InviteYourFriend.jpg"></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/2192023-PLPStrip-RelianceOne-Points-1440x128.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-03102023-AllianceStripsStatic-Z1-ShopEarn2.jpg" alt=""></li>
+    
+            </ul>
+        </div>
+       
+    </div>
+    
+    <div class="bigshotbrands">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-BigShotBrands-Sectionheader.jpg" alt="" style="width: 100%;">
+    </div>
+    <div id="brands">
+        <div class="brand one"   >
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-06102023-SuperstarBrandTiles-mns-min50.jpg" alt="">
+    
+        </div>
+       
+        <div class="brand two" >
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-TopBrandsTile-Leewrangler-min50.jpg"alt="">
+    
+        </div>
+        <div class="brand three"  >
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-BigTicketBrands-GAP-Upto50.jpg"alt="">
+    
+        </div>
+        <div class="brand four"  >
+            <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-BigTicketBrands-Snitch-Min60.jpg" alt="">
+    
+        </div>
+    </div>
+    <div id="bestsellers">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Bestsellers-1-Mens-Upto80.jpg" alt="">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Bestsellers-2-WomenWesternwear-Upto80.jpg" alt="">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Bestsellers-3-WomenEthnicwear-Starting249.jpg" alt="">
+    </div>
+    <div id="todayhotfavourites">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-TodaysHotFavourites-Sectionheader.jpg" alt="" style="width:100%">
+    </div>
+    <div id="todayfav">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                
+                <li> <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-Dailybanner-1-Crocs-Upto35.jpg"alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-Dailybanner-2-Lifestyle-Upto50.jpg"></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-Dailybanner-3-Dillinger-Thebearhouse-Min60.jpg" alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-Dailybanner-4-Christofano-Hiattitude-Under999.jpg" alt=""></li>
+    
+            </ul>
+        </div>
+       
+    </div>
+    <div id="unmissabledeals">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-05102023-UnmissableDeals-Sectionheader.jpg" style="width:100%" alt="">
+    </div>
+    <div id="unmissdeal">
+        <div class="auto-slider">
+            <ul class="auto-slider-content">
+                
+                
+                <li> <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-JIT-7-Z13-Gulmohar-Janasya-Flat50.jpg"alt=""></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-JIT-1-Z13-Ivoc-Aask-Min55.jpg"></li>
+                <li><img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-11102023-JIT-2-Z13-Anubhutee-Even-Flat55.jpg" alt=""></li>
+                
+    
+            </ul>
+        </div>
+       
+    </div>
+    <div id="trendingnow">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Trends-Avaasa-DNMX-Netplay-Upto70.jpg" alt="">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Trends-Altheory-Outryt-Min50.jpg" alt="">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-Trends-Budajeans-Fyrerose-Acai-Upto60.jpg"alt="">
+    </div>
+    <div id="egiftcards">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-GiftCard.gif" width="100%" alt="">
+    </div>
+    <div id="diffstyles">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-EthnicwearCollection-Header.jpg" alt="">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-EthnicwearCollection-AvaasaSiyaahi-min40.jpg" alt="">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-EthnicwearCollection-fashorgulmohar-min50.jpg" alt="">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-EthnicwearCollection-indiepickskalanikethan-min40.jpg" alt="">
+    </div>
+    <!-- <div class="ftr-top">
+        <ul>
+            
+            <li><span class="ic-updat"></span><span>EASY EXCHANGE</span></li></i>
+            <li><div id="wish-lis"><div class="add"><i class="fa-light fa-hand-holding-heart fa-2xl"></i></div></div></li>
+            <li><span><i class="fa-solid fa-hand-holding-heart fa-2xl"></i></span><span>100% HANDPICKED</span></li>
+            <li><span class="ic-qlty"></span><span>ASSURED QUALITY</span></li>
+        </ul>
+    </div> -->
+    <div id="discovernew">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-DiscoverOnlineStores-Sectionheader.jpg" alt="">
+      <img src="https://assets.ajio.com/cms/AJIO/WEB/D-1.0-UHP-22092023-DiscoverOnlineStores-1-AjioGold.jpg" alt="">
+    </div>
+    <div id="allstarsale">
+        <img src="https://assets.ajio.com/cms/AJIO/WEB/21092023-D-Discover Online Stores.jpg" width="100%" alt="">
+    </div>
+   
+    <div id="footer">
+       <div id="ajioqueries">
+        <ul>
+            <li>Ajio </li><br>
+            <li>  <a class="w" href="https://www.ajio.com/help/whoweare">Who We Are</a></li>
+            <li><a class="w" href="https://www.ajio.com/ajio-careers">Join Our Team </a></li>
+            <li> <a class="w" href="https://www.ajio.com/help/termsAndCondition">Terms & Conditions </a></li>
+            <li><a class="w" href="https://www.ajio.com/privacypolicy">We Respect Your Privacy </a></li>
+            <li> <a class="w" href="https://www.ajio.com/fee-payment-promotion-policy">Fees & Payments</a></li>
+            <li>  <a class="w" href="https://www.ajio.com/return-refund-policy">Returns & Refunds Policy</a></li>
+            <li> <a class="w" href="https://www.ajio.com/ajio-own-sale-policy">Promotions Terms & Conditions</a></li>
+             
+               
+        </ul>
+       </div>
+       <div id="helpqueries">
+         <ul>
+          
+
+            <li>  Help</li><br>
+            <li> <a class="w" href="https://www.ajio.com/login?referrer=my-account/orders">Track Your Order</a></li>
+            <li> <a class="w" href="https://www.ajio.com/selfcare">Frequently Asked Questions</a></li>
+            <li><a class="w" href="https://www.ajio.com/selfcare">Returns</a></li>
+            <li><a class="w" href="https://www.ajio.com/selfcare">Cancellations</a></li>
+            <li><a class="w" href="https://www.ajio.com/selfcare">Payments</a></li>
+            <li><a class="w" href="https://www.ajio.com/selfcare">Customer  Care</a></li>
+            <li><a class="w" href="https://www.ajio.com/coupon-faq">How Do I Redeem My Coupon</a></li>
+           
+         </ul>
+       </div>
+       <div id="shopbyqueries">
+        <ul>
+            
+           
+            <li>Shop by</li>
+            <br>
+            <li> <a class="w" href="https://www.ajio.com/shop/men">Men</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/women">Women</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/kids">Kids</a></li>
+            <li> <a class="w" href="https://www.ajio.com/shop/Indie">Indie</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/Stores">Stores</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/fresh-arrivals">New Arrivals</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/Brand">Brand</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/Directory">Directory</a></li>
+            <li> <a class="w" href="https://www.ajio.com/shop/Home">Home</a></li>
+            <li><a class="w" href="https://www.ajio.com/shop/Collections">Collections</a></li>
+        </ul>
+       </div>
+       <div id="followusqueries">
+        <ul>
+            <li>Follow Us</li>
+            <br>
+            <li> <a href="https://www.facebook.com/AJIOlife" class="w">Facebook</a></li>
+            <li><a href="https://www.instagram.com/AJIOlife/" class="w">Instagram- AJIOlife</a></li>
+            <li> <a href="https://www.instagram.com/ajioluxe/" class="w">Instagram- AJIO LUXE</a></li>
+            <li><a href="https://twitter.com/AJIOLife" class="w">Twitter</a></li>
+            <li><a href="https://www.pinterest.com/ajiolife/" class="w">Pinterest</a></li>
+        </ul>
+
+
+       </div>
+       
+       <hr id="hr1">
+       <!-- <hr  style="border:20px solid white; color:white"> -->
+       <div class="payment" >
+       
+       <h3>  &nbsp;&nbsp;Payment Methods</h3>
+       <ul>
+        <li>NetBanking</li>
+        <li >Visa</li>
+        <li >MasterCard</li>
+        <li>COD</li>
+        <li>JioMoney</li>
+       </ul>
+     </div>
+      
+       <div id="securesystems">
+        <h2>Secure Systems</h2>
+        <h3>256 BIT Encryption</h3>
+       </div>
+    </div>
+    <!-- jdjnjnjnncxnnx
+    <hr>
+    cbhbnxbcbnmbxc -->
+</body>
+</html>

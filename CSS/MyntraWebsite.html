@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #navbar{
+            background-color: white;
+            width: 100%;
+            height: 80px;
+        }
+        #logo{
+            padding:18px;
+            width:5%;
+            height: 42px;
+            padding-left: 30px;
+            /* background-color: blue; */
+            float:left;
+        }
+        #categories{
+            /* background-color: cadetblue; */
+            width:45%;
+            height: 80px;
+            float:left;
+        }
+        ul li{
+            list-style-type: none;
+            cursor: pointer;
+        }
+        #navbar #categories{
+            text-align: center;
+        }
+        #navbar #categories ul{
+            display: inline-flex;
+            padding:30px;
+            /* position:fixed; */
+        }
+        #navbar #categories ul li{
+           
+            padding-left:30px;
+        }
+        #su{
+            margin-top:-5px; 
+        }
+        #search{
+            width:32%;
+            height: 80px;
+            /* background-color:white; */
+            float: left;
+            /* border:2px solid black */
+        }
+        #sea{
+            position:relative;
+            top:20px;
+            left:30px;
+            padding:10px;
+            width:70%;
+            border:1px solid black;
+        }
+        input{
+            border: none;
+            outline: none;
+           
+        }
+       #navbar #cartrelated ul{
+        display: inline-flex;
+        padding: 30px;
+
+        }
+        #navbar #cartrelated ul li{
+       
+        padding: 20px;
+        margin-top: -20px;
+     
+
+        }
+        i{
+            /* width:50px;
+            height: 50px; */
+            transform: scale(1.5);
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        #header1{
+        background-color:white;
+        display: block;
+        position: fixed;
+        height:480px;
+        width:80%;
+        margin-left: -100px;
+        /*
+        position:relative;
+        margin-left: 30px;
+        margin-top:0px; */
+        /* display:none; */
+        
+       }
+        #childnav{
+            width:67%;
+            height:500px;
+            background-color: aqu;
+            position:fixed;
+            
+            display:none;
+        }
+        #childnav>#header1 ul{
+            display:block;
+          
+        }
+        #navbar #categories ul li:hover{
+        font-weight: 650;
+       }
+       #navbar #categories ul li:hover #childnav  {
+           
+           
+           display:block;
+           /* position:relative;
+           margin-left: 30px;
+           */
+       }
+        #subnav1{
+        /* background-color: aqua; */
+        /* background-color: blue; */
+        text-align:center;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top:10px;
+        margin-left:-30px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 500;
+        line-height: 25px;
+        color:black;
+        
+        
+       }
+       #subnav2{
+        /* background-color: aqua; */
+    
+        width:25%;
+        height:600px;
+        background-color: blu;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:250px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* font-family: 'Times New Roman', Times, serif; */
+        font-weight: 500;
+        line-height: 25px;
+        color:black;
+        text-align: left;
+        /* text-indent: 0px; */
+        /* text-align:end; */
+        
+       }
+       /* #subnav2 ul li{
+        text-align: left;
+       } */
+       #subnav3{
+        background-color: aqu;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:480px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+        color:black;
+       
+       }
+       #subnav4{
+        background-color: aqu;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:710px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+        color:black;
+       
+       }
+       #subnav5{
+        background-color: aqu;
+        width:25%;
+        height:600px;
+        position:absolute;
+        margin-top: 10px;
+        margin-left:910px ;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 500;
+        line-height: 25px;
+        color:black;
+       }
+       
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+          <img src="./../JS/myntra.png" alt="" height="40px" width="60px">
+        </div>
+        <div id="categories">
+           <ul>
+            <li>MEN
+                <div id="childnav">
+                    <div id="header1">
+                        <div id="subnav1">
+                         <ul>
+                            <li><a href="" style="color: deeppink;"> Topwear</a></li>
+                            <li> <a href="">T-Shirts</a></li>
+                            <li><a href=""> Casual_Shirts</a></li>
+                            <li><a href=""> Formal_Shirts </a></li>
+                            <li><a href="">Sweatshirts</a></li>
+                            <li><a href="">Sweaters</a></li>
+                            <li><a href="">  Jackets</a></li>
+                            <li><a href="">  Blazers&Coats</a></li>
+                            <li> <a href="">Suits</a></li>
+                            <li><a href=""> Rain_Jackets </a></li>
+                            <!-- <hr style="border: 1px dotted grey;width: 220px;"> -->
+                            <br>
+                            <li><a href="" style="color: deeppink;">  Indian&Festive Wear</a></li>
+                            <li><a href="">  Kurtas&KurtaSets</a></li>
+                            <li><a href="">  Sherwanis</a></li>
+                            <li><a href="">Nehru_Jackets </a></li>
+                            <li><a href=""> Dhotis</a></li>
+                           
+                              
+                                
+                         </ul>
+                        </div>
+                        <div id="subnav2">
+                         <ul>
+
+                           <li><a href="" style="color: deeppink;">Bottomwear</a></li>
+                           <li><a href="">Jeans</a></li>
+                           <li><a href="">Casual Trousers</a></li>
+                           <li><a href="">Formal Trousers</a></li>
+                           <li><a href="">Shorts</a></li>
+                           <li><a href="">Track Pants & Joggers</a></li>
+                           <!-- <hr style="border: 1px dotted grey;width: 220px;"> -->
+                           <br>
+                           <li><a href="" style="color: deeppink;">Innerwear & Sleepwear</a></li>
+                           <li><a href="">Briefs & Trunks</a></li>
+                           <li><a href="">Boxers</a></li>
+                           <li><a href="">Vests</a></li>
+                           <li><a href="">Sleepwear & Loungewear</a></li>
+                           <li><a href="">Thermals</a></li>
+                           <!-- <hr style="border: 1px dotted grey;width: 220px;"> -->
+                           <br>
+                           <li><a href="" style="color: deeppink;">Plus Size</a></li>
+                           
+                          </ul>
+                        </div>
+                        <div id="subnav3">
+                         <ul>
+                            
+                            <li><a href=""  style="color: deeppink;">Footwear</a></li>
+                            <li><a href="">Casual Shoes</a></li>
+                            <li><a href="">Sports Shoes</a></li>
+                            <li><a href="">Formal Shoes</a></li>
+                            <li><a href="">Sneakers</a></li>
+                            <li><a href="">Sandals & Floaters</a></li>
+                            <li><a href="">Flip Flops</a></li>
+                            <li><a href="">Socks</a></li>
+                            <br>
+                            <li><a href=""  style="color: deeppink;">Personal Care & Grooming</a></li>
+                            <br>
+                            <li><a href=""  style="color: deeppink;">Sunglasses & Frames</a></li>
+                            <br>
+                            <li><a href=""  style="color: deeppink;">Watches</a></li>
+                         </ul>
+                        </div>
+                        <div id="subnav4">
+                         <ul>
+                           
+                            <li><a href="" style="color: deeppink;">Sports & Active Wear</a></li>
+                            <li><a href="">Sports Shoes</a></li>
+                            <li><a href="">Sports Sandals</a></li>
+                            <li><a href="">Active T-Shirts</a></li>
+                            <li><a href="">Track Pants & Shorts</a></li>
+                            <li><a href="">Tracksuits</a></li>
+                            <li><a href="">Jackets & Sweatshirts</a></li>
+                            <li><a href="">Sports Accessories</a></li>
+                            <li><a href=""> Swimwear</a></li>
+                            <br>
+                            <li><a href="" style="color:deeppink"> Gadgets</a></li>
+                            <li><a href="">Smart Wearables</a></li>
+                            <li><a href="">Fitness Gadgets</a></li>
+                            <li><a href="">Headphones</a></li>
+                            <li><a href=""> Speakers    </a></li>
+                           
+                         </ul>
+                 
+                 
+                        </div>
+                        <div id="subnav5">
+                            <ul>
+                               
+                               <li><a href=""  style="color: deeppink;">Fashion Accessories</a></li>
+                               <li><a href=""> Wallets</a></li>
+                               <li><a href=""> Belts</a></li>
+                               <li><a href=""> Perfumes & Body Mists</a></li>
+                               <li><a href="">  Trimmers</a></li>
+                               <li><a href=""> Deodorants</a></li>
+                               <li><a href=""> Ties, Cufflinks & Pocket Squares</a></li>
+                               <li><a href=""> Accessory Gift Sets</a></li>
+                               <li><a href=""> Caps & Hats</a></li>
+                               <li><a href=""> Mufflers, Scarves & Gloves</a></li>
+                               <li><a href=""> Phone Cases</a></li>
+                               <li><a href="">  Rings & Wristwear</a></li>
+                               <li><a href="">Helmets</a></li>
+                              
+                               <li><a href=""  style="color: deeppink;"> Bags & Backpacks</a></li>
+                               <br>
+                               <li><a href="" style="color: deeppink;"> Luggages & Trolleys</a></li>
+                            </ul>
+                           </div>
+                        <!-- <hr  style="border:20px solid white; color:white"> -->
+                        
+                        
+                     </div>
+                   
+                </div>
+            </li>
+            <li>WOMEN</li>
+            <li>KIDS</li>
+            <li>HOME & LIVING</li>
+            <li>BEAUTY</li>
+            <li id="su">STUDIO <sup style="color: deeppink;">NEW</sup></li>
+ 
+           </ul>
+        </div>
+        <div id="search">
+            <div id="sea">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for products,brands and more">
+        </div>
+         
+        </div>
+        <div id="cartrelated">
+           <!-- <br>profile
+           <br>wishlist
+           ></i><br>Bag -->
+          <ul>
+            <li> <i class="fa-regular fa-user"></i></li>
+            <li><i class="fa-regular fa-heart"></i></li>
+            <li><i class="fa-solid fa-bag-shopping"></i></li>
+          </ul>
+
+        </div>
+    </div>
+</body>
+</html>

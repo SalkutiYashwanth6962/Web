@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dom represents tree of nodes & api 
+      --traditional family tree
+      -- -->
+    <div> <!--previous sibling-->
+        <p id="msg">Javascript DOM</p>
+        
+        
+    </div>
+    <input type="radio" name="language " value="js">
+        <input type="radio" name="language " value="pyton">
+        <h1 class="msg">first</h1>
+        <h1 class="msg">first</h1>
+        <h1>first</h1>
+
+    <script>
+        let msg=document.getElementById("msg");
+        console.log(msg);
+        // no element with that id it will return null
+        // multiple ids it will return first element 
+
+        let btn=document.getElementsByName("language");
+        console.log(btn);
+        let heading=document.getElementsByTagName("h1");
+        console.log(heading)
+        let msg1= document.getElementsByClassName("msg1");
+        console.log(msg1)
+        //instead of document we can use some specific id we want the content
+        //querySelector() method allows you to select the first element that matches one or more css selectors.
+        let msg4=document.querySelector(".msg")
+        console.log(msg4)
+        let msg5=document.querySelectorAll(".msg")
+        console.log(msg5)
+        //traversing element
+        //parent child elements
+        // .parentNode --to get parent element of particular tag
+        //.firstChild -- we will get empty text node
+        //.firstElementChild
+        //.lastElementChild
+        //.childNodes
+        //.previousElementSibling
+        //.nextElementSibling
+
+        //Manipulation
+        //let tg=document.createElement("tag name")
+        //tg.innerHTML="<p>Welcome to greatstack</p>"
+        //tg.id="title"
+        //tg.className="title"
+        //and many more attributes
+        //document.body.appendChild(tg);
+        //textContent property to get text content of a node.where as it ignores the html tag and display text and text 
+        //innerText will return only visible content only where some display is none.
+        //innerHtml-is used to add html content on the web page accepts text and html tags
+
+        //after()  =>Element.after(node1,node2/strings also)
+        //append(new nodes) multiple items we can add
+        //prepend is used to child nodes as first nodes of parent nodes
+        //insertAdjacentHTML(positionName,text) beforeend , <li>contact</li>
+        //replaceChild(newChild,oldChild)
+        //to clone an elemnt .cloneNode()
+        //removeChild()=>parentNode.removeChild(childNode);
+        //insetBefore()=>parentNode.insertBefore(newnode,existingNode)
+
+
+        //Attributes method
+        //element.attributesto get all attributes
+        //getAttibute("") - to read attribute value
+        //setAttribute("name","value")
+        //hasAttribute("name") - it is present  or not true/false;
+        //removeAttribute() =>element.removeAttribute(attribute name);
+
+        // Manipulating Elements style:
+        //style property -to get/set inline style of an element.
+        //element.style.cssproperty="value";
+       // element.style.cssText="value"; to override existing css property +=
+        //getComputedStyle=>window.getComputedStyle(element).cssstyleproperty
+        //className property returns list of classes separated by space
+        //multiple classes situation 
+        //to add new class also we use this className previous class names will be removed and new class names will be overrided. ===> title.className+="new" to avoid overriding.
+
+        //classList Propery
+        //it returns collection of css classes..
+        //element.classList
+        //element.classList.add("new1","new2") to add classes
+        //element.classList.remove("new1","new2")
+        ////element.classList.replace("existing class name","new name")
+        //element.classList.contains("class name") reurns true or false
+        //element.classList.toggle("class name") if the class name is not present it will add else it will remove if it is present.
+        
+
+        //events
+        //it is an action that occurs in web browser.
+        //event handler is also known as event listener
+         
+       // onclick
+       // event.type,.target,
+       //this keyword refers to the target element this.id
+
+       //addEventListener(event,function,useCapure(false by default))
+       //element.classList.add("new1","new2")
+        //addEventListener(event,function)
+        //different events : mousemove(when you move the cursor around the element)
+                            //  mousedown(whenn you press the mouse button the element)
+                            //  mouseup(when you will release the mouse button)
+                            //  mouseover(when the mouse cursor move from outside to inside the boundaries of the element)
+                            //  mouseout(when the cursor is over an element and then moves to another element)
+                            //  keydown
+                            //  keyup
+                            //keypress (event fires when you press a character on keyboard like a,b,c  i fires repeatedly while you hold down key on the keyboard)
+                            //scroll
+
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

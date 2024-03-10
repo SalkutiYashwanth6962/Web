@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analog clock</title>
+    <style>
+       body
+       {
+        
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       }
+       .container{
+        position: relative;
+       }
+       .clock{  
+        background-color: black;
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       } 
+       .clock span{
+        position: absolute;
+        transform: rotate(calc(30deg*var(--a)));
+        inset: 10px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+       }
+       .clock span i{
+        transform: rotate(calc(-30deg*var(--a)));
+        display: inline-block;
+       }
+       .clock::before{
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background-color: rgb(253, 249, 249);
+        border-radius: 50%;
+        z-index:2;
+       }
+       
+       .niddle b{
+       position: absolute;
+        width: 5px;
+        height: var(--h);
+        background-color: var(--c);
+        border-radius: 10px;
+        z-index:1;
+       }
+       .niddle{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+       }
+       h1{
+        color: rgb(0, 255, 72);
+        font-size: 50px;
+        -webkit-text-stroke: 2px rgb(5, 6, 5);
+       }
+       .alarm{
+        position: absolute;
+        top: 550px;
+        left: 550px;
+        height: 500px;
+        width: 500px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+       }
+       input{
+        width: 100px;
+       text-align: center;
+       
+       }
+       .heading
+       {
+        display: inline-flex;
+        
+       }
+       audio{
+        visibility:hidden;
+       }
+       .alarm h2{
+        margin-left: 50px;
+       }
+       .alarm #abc,#abc1{
+        margin-left: 20px;
+        font-size: 20px;
+       }
+    </style>
+</head>
+<body>
+    <h1>Analog clock</h1>
+    <div class="container">
+        <div class="clock">
+            <div class="niddle" id="sec" style="--h:95px; --c:aqua;"> <b></b></div>
+            <div class="niddle" id="min" style="--h:80px; --c:green;"><b></b></div>
+            <div class="niddle" id="hr" style="--h:65px; --c:red;">  <b></b></div>
+            <span style="--a:1"><i>1</i></span>
+            <span style="--a:2"><i>2</i></span>
+            <span style="--a:3"><i>3</i></span>
+            <span style="--a:4"><i>4</i></span>
+            <span style="--a:5"><i>5</i></span>
+            <span style="--a:6"><i>6</i></span>
+            <span style="--a:7"><i>7</i></span>
+            <span style="--a:8"><i>8</i></span>
+            <span style="--a:9"><i>9</i></span>
+            <span style="--a:10"><i>10</i></span>
+            <span style="--a:11"><i>11</i></span>
+            <span style="--a:12"><i>12</i></span>
+        </div>
+    </div>
+    <div class="alarm">
+        <div ><h2>set alarm</h2>
+        <div class="heading"><input type="text" name="" id="hr1" placeholder="hours"></div>
+        <div class="heading"><input type="text" name="" id="min1"  placeholder="Minutes"></div><br><br>
+        <div class="heading"><button onclick="alarmdisplay1()">submit</button></div><center>
+         </center>
+        <h2 id="abc"></h2>
+        <h2 id="abc1"></h2>
+        <audio  id="aud"><source src="./../assignments/Jokerbadboysong128kRingtone.mp3"></audio>
+    </div>
+
+    </div>
+<script>
+        
+    function Analog_clock()
+    {
+        let hr = document.getElementById("hr")
+        let sec = document.getElementById("sec")
+        let min = document.getElementById("min")
+        let date= new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+           
+        //for hours
+       let h1=30*h + m/2;
+      
+        //for min
+       let m1=m*6;
+       
+        // for seconds
+       let s1=6*s;
+    
+
+        hr.style.transform = `rotate(${h1}deg)`
+        min.style.transform = `rotate(${m1}deg)`
+        sec.style.transform = `rotate(${s1}deg)`
+        
+    }
+    Analog_clock()
+    setInterval(() => {
+        Analog_clock()
+    }, 1000);
+  //alarm
+  function alarmdisplay()
+    {
+        let date= new Date();
+        let h = date.getHours();
+        let m = date.getMinutes();
+        let s = date.getSeconds();
+        let aud1=document.getElementById("aud")
+       let hour=document.getElementById("hr1").value;
+        let mi=document.getElementById("min1").value;
+       /* if(mi<10)
+        {
+            mi=0${mi};
+        }
+        document.getElementById("abc").innerHTML= your alarm time is ${hour}:${mi}; */
+        if(h==hour && m==mi)
+        {
+            document.getElementById("abc1").innerHTML= please wake up time is ${hour}:${mi};
+            aud1.play();
+        }
+        else{
+            aud1.pause();
+        }
+        
+    }
+    alarmdisplay()
+    setInterval(() => {
+        alarmdisplay()
+    }, 1000);
+
+    function alarmdisplay1()
+    {
+        let hour=document.getElementById("hr1").value;
+        let mi=document.getElementById("min1").value;
+        if(mi<10)
+        {
+            mi=0${mi};
+        }
+        document.getElementById("abc").innerHTML= your alarm time is ${hour}:${mi};
+    }
+    
+    
+</script>
+</body>
+</html>

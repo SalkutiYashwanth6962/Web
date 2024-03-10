@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <style>
+    /* body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } */
+    .signup-container {
+      display: none;
+      width: 500px;
+      height: 300px;
+      /* background-image: linear-gradient(to bottom right,rgba(79,51,176,1),rgba(210,53,165)); */
+      backdrop-filter:blur(6px);
+      border: 2px solid black;
+      opacity: 1.0px;
+      position: relative;
+      left: 450px;
+      top:200px;
+      color:aliceblue;
+
+    }
+    #aa{
+        display: none;
+    }
+    .img:hover #aa{
+        display: block;
+        
+    }
+    .img #aa:hover{
+        background-color:coral;
+        color: deeppink;
+        font-weight: bolder;
+    }
+    h2{
+        text-align: center;
+        color: white;
+    }
+    *{
+            margin: 0px;
+        }
+    .img{
+            width: 100%;
+            min-height: 750px;
+            background-image: url(./main1.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+          
+
+            
+        }
+        .img button:hover{
+        background-color:coral;
+        color: deeppink;
+        font-weight: bolder;
+        }
+      
+    #aa{
+           
+        display: block;
+        padding: 10px 30px;
+        position: relative;
+        left: 600px;
+        top: 600px;
+        color: aliceblue;
+        background-color: black;
+        border-radius: 10px;
+        transition: 3s;
+        
+        }
+        input{
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        #d{
+            display: block;
+          color:black;
+          background-color: white;
+          position: relative;
+          top: 20px;
+          left: 150px;
+          border-radius: 20px;
+          
+        }
+        #d:hover{
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+        }
+        input{
+            position: relative;
+            left: 60px;
+        }
+        label{
+            position: relative;
+        
+        }
+        #inp2{
+            position: relative;
+            left: 120px;
+        }
+        h3{
+            position: relative;
+            left: 10px;
+            top: 30px;
+        }
+        h4{
+            position: relative;
+            top: 30px;
+            left: 10px;
+        }
+        #s2{
+            position: relative;
+            left: 50px;
+        }
+  </style>
+</head>
+<body>
+    <div class="img">
+
+
+  
+
+  <div id="login-container">
+    <h2></h2>
+    <!-- Add your login form here -->
+    <button id="aa" onclick="showSignup()">Go to Signup</button>
+  </div>
+
+
+
+  <div id="signup-container" class="signup-container">
+    <h2>SIGN-UP</h2><br>
+    <label for=""><h3>NAME:</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="inp1"></p></label>
+
+      <br>
+      <small id="s1"></small>
+      <label for=""><p><h4>PASSWORD:</h4><input type="text" id="inp2"></p><br></label>
+      <small id="s2"></small>
+
+    <button  id="d" onclick="showLogin()">Go to Login</button>
+  </div>
+</div>
+
+
+
+
+
+  <script>
+    function showSignup() {
+      document.getElementById('login-container').style.display = 'none';
+      document.getElementById('signup-container').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('login-container').style.display = 'block';
+      document.getElementById('signup-container').style.display = 'none';
+    
+   
+
+   
+let name=document.getElementById("inp1").value
+let inp1=document.getElementById("inp1")
+let pass=document.getElementById("inp2").value
+let inp2=document.getElementById("inp2")
+let s1=document.getElementById("s1")
+let s2=document.getElementById("s2")
+let d=document.getElementById("d")
+// s1.innerHTML=user name is ${name}
+// s2.innerHTML=pass is ${pass}
+if(name==pass){
+    s2.style.fontSize="30px"
+    s1.style.color="red"
+    s2.innerHTML="both are mathced"
+    console.log("both are matched");
+    window.open("https://www.facebook.com");
+}
+// if(name==pass){
+//    s1.style.color="red"
+//     s1.innerHTML=both are matched
+//     window.open(https://www.${inp1}.com)
+// }
+    }
+
+  </script>
+
+</body>
+</html>

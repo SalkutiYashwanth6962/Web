@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="b1">
+    <script>
+        let heading=document.createElement("h1");
+        heading.innerHTML="WELCOME TO HEADING TAG";
+        console.log(heading);
+        let mark=document.createElement("mark");
+        mark.innerHTML="WELCOME TO MARK TAG";
+        console.log(mark);
+        let b=document.createElement("B");
+        b.innerHTML="WELCOME TO BOLD TAG";
+        console.log(b);
+        let small=document.createElement("small");
+        small.innerHTML="WELCOME TO SMALL TAG";
+        console.log(small);
+
+        let hr=document.createElement("hr");
+        hr.innerHTML="WELCOME TO HR TAG";
+        console.log(hr);
+        let marquee=document.createElement("marquee");
+        marquee.innerHTML="WELCOME TO MARQUEE TAG.";
+        console.log(marquee);
+        marquee.setAttribute("scrollamount","60px");
+        marquee.setAttribute("direction","right");
+        marquee.setAttribute("loop","3");
+        console.log(marquee);
+       // document.body.append(heading);
+
+       document.getElementById("b1").append(heading);
+      let body=document.body;
+     // body.append(heading);
+      body.append(mark);
+      body.append(b);
+      body.append(small);
+      body.append(hr);
+      body.append(marquee);
+
+
+
+    </script>
+</body>
+</html>

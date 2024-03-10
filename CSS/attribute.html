@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #abc{
+            color:red;
+            background-color: blueviolet;
+            padding:30px;
+        }
+        .abc1{
+            text-shadow: 2px 2px 2px 2px red;
+        }
+        [title="abc"]{
+            font-size: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to heading tag </h1>
+    <button onclick="demo()">submit</button>
+    <script>
+        function demo(){
+        let heading=document.querySelector("h1");
+        heading.setAttribute("id","abc");
+        heading.setAttribute("class","abc1");
+        heading.setAttribute("title","abc");
+        console.log(heading);
+
+        let a=heading.getAttribute("id");
+        console.log(a);
+        let b=heading.getAttribute("class");
+        console.log(b);
+       // heading.removeAttribute("id");
+        let c=heading.hasAttribute("class");
+        console.log(c);
+        }
+    </script>
+</body>
+</html>

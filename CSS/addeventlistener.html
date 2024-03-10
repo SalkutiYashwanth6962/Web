@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="abc()">CLICK</button>
+    <button id="abc">CLICK</button> -->
+    <script>
+        document.body.style.backgroundColor="yellow";
+        let b1=document.createElement("button");
+        b1.addEventListener('click',()=>{
+            document.body.style.backgroundColor="pink";
+        })
+        b1.innerHTML="submit";
+        document.body.append(b1);
+
+        // function abc(){
+        //     document.body.style.backgroundColor="orange";
+        // }
+        // let b= document.querySelector("#abc");
+        // b.onclick=abc;
+        // b.addEventListener('click',abc)
+
+        // b.addEventListener('click',function(){
+        //     document.body.style.backgroundColor="orange"
+        // })
+        let b=document.createElement("button");
+        b.addEventListener('click',()=>{
+            document.body.style.backgroundColor="deeppink"
+        })
+        b.innerHTML="SUBMIT";
+        document.body.append(b);
+
+        let c=document.createElement("button");
+        c.addEventListener("click",()=>{
+            document.body.style.backgroundColor="orangered"
+        })
+        c.innerHTML="submit3"
+        document.body.append(c)
+    </script>
+</body>
+</html>

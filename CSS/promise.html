@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // console.log("welcome");
+        // function abc(){
+        //     console.log("abcdefggh");
+        // }
+        // abc()
+        // console.log("bye");
+
+        // console.log("welcome..");
+        // setTimeout(()=>{
+        //     console.log("hii")
+        // },5000);
+        // console.log("end");
+
+        let p = new Promise((resolve,reject)=>{
+            let meet = false;
+            if(meet==true){
+                resolve("I meet you")
+            }
+            else{
+                reject(" I could n't meet you ...")
+            }
+        })
+        console.log(p);
+        console.log(typeof p);
+
+        p.then((success)=>{
+            console.log(success)
+        }).catch((error)=>{
+            console.log(error)
+        })
+
+    </script>
+</body>
+</html>

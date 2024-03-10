@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            width:300px;
+            height:300px;
+
+        }
+        #img{
+            width:300px;
+            height:300px;
+            
+        }
+        .div{
+            width:300px;
+            height:300px;
+            background-color: chartreuse;
+        }  
+    </style>
+</head>
+
+<body>
+   
+    <script>
+        let f=document.createElement("fieldset");
+        f.style.width="300px";
+        f.style.height="300px";
+        let l=document.createElement("legend");
+        l.innerHTML="welcome to legend";
+        f.append(l)
+        console.log(l);
+        console.log(f);
+        let img=document.createElement("img");
+        // img.width="300"
+        // img.height="300"
+        // img.style.width="300px";
+        // img.style.height="300px";
+       // img.classList.add("img")
+        img.setAttribute("id","img")
+        img.src="./JS/charminar.jpg";
+        console.log(img);
+        //f.append(img)
+        f.append("good morning",l,img);
+       // f.appendChild("good morning",l,img);
+       //not possible style will be applied to only one first style attribute
+       let d=document.createElement("div");
+       d.classList.add("div");
+       console.log(d);
+       let h=document.createElement("h1");
+       h.innerHTML="welcome to heading tag";
+       let b=document.body;
+       b.append(f);
+       b.insertBefore(d,f);
+       //b.appendChild(h);
+       //b.insertBefore(h,d)
+       //insert h before d
+
+       let i=document.createElement("img");
+       i.src="./myntra.jpg";
+       f.replaceChild(i,img);
+       //it replaces i with img 
+       b.insertBefore(h,f);
+
+    //==========================================================================
+    
+    </script>
+</body>
+</html>
